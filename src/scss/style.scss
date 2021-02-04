@@ -1,7 +1,12 @@
 @import "lib/additional.scss"; 
 @include reset(); 
 
-@include font-face("Segoe-UI", "SUI");
+@include font-face("Circe-Light", "CL");
+@include font-face("Circe-Bold", "CB");
+@include font-face("SegoeUI", "SR");
+@include font-face("SegoeUI-SemiBold", "SSB");
+@include font-face("SegoeUI-Bold", "SB");
+@include font-face("SegoeUI-Light", "SL");
 
 @import '../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
@@ -13,8 +18,9 @@ body, html {
 	font-size: #{$basesize}px;
 	// line-height: calc(#{$basesize}px * 1.4);
 
-	font-family: "SUI", sans-serif;
-	background-color: #fafafa;
+	font-family: "SR", sans-serif;
+	background-color: #fff;
+	color: #000;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;

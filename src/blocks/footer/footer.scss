@@ -1,0 +1,72 @@
+.footer {
+	$self: &;
+	background-color: $dark;
+	color: #fff;
+	padding: 40px 0 15px;
+
+	&__inner {
+		padding: 0 20px;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+	}
+
+	&__logo {
+		max-width: 320px;
+		flex-grow: 1;
+		padding-right: 20px;
+	}
+
+	&__navi {
+		// @include outline();
+		max-width: 250px;
+		flex-grow: 1;
+		padding-right: 20px;
+		font-family: "SL", sans-serif;
+	}
+
+	&__navi-title {
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+
+	&__navi-item {
+		color: inherit;
+		text-decoration: none;
+		display: block;
+		line-height: 1.5;
+	}
+
+	&__info {
+		text-align: right;
+		max-width: 180px;
+		margin-left: auto;
+	}
+	
+	&__info-title {
+		font-family: "CB", sans-serif;
+		font-size: 18px;
+		line-height: 1.1;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	
+	&__info-row {
+		display: flex;
+		justify-content: space-between;
+		font-family: "CL", sans-serif;
+		font-size: 14px;
+		margin-bottom: 0;
+
+		&_adress {
+			font-style: italic;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__copyright {
+		width: 100%;
+		margin-top: 50px;
+		font-size: 12px;
+	}
+}

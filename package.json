@@ -1,0 +1,69 @@
+{
+	"name": "gulp-scss-starter",
+	"version": "1.0.3",
+	"scripts": {
+		"bem": "bemtree-from-html",
+		"start": "gulp watch --dev --sync",
+		"remote": "gulp watch --remote",
+		"build": "gulp build",
+		"deploy-all": "gulp deploy --all",
+		"deploy": "gulp deploy",
+		"grid": "gulp grid"
+	},
+	"keywords": [
+		"bem",
+		"html",
+		"scss",
+		"gulp"
+	],
+	"author": "Alexandr Tumanov <shurinskiy2@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/shurinskiy/gulp_scss_starter"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.12.10",
+		"@babel/preset-env": "^7.12.11",
+		"babel-loader": "^8.2.2",
+		"bemtree-from-html": "^1.0.5",
+		"browser-sync": "^2.26.13",
+		"del": "^6.0.0",
+		"fancy-log": "^1.3.3",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-file-include": "^2.3.0",
+		"gulp-fonter": "^0.3.0",
+		"gulp-if": "^3.0.0",
+		"gulp-lipsum-vars": "0.0.3",
+		"gulp-load-plugins": "^2.0.6",
+		"gulp-rsync": "0.0.9",
+		"gulp-sass": "^4.1.0",
+		"gulp-sass-glob": "^1.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-svg-symbol-view": "^1.0.1",
+		"mkdirp2": "^1.0.4",
+		"vinyl-ftp": "^0.6.1",
+		"webpack-stream": "^6.1.1"
+	},
+	"dependencies": {
+		"bootstrap": "^4.6.0",
+		"jquery": "^3.4.1",
+		"owl.carousel": "^2.3.4"
+	},
+	"externalJs": {
+		"jquery": "dist/jquery.min.js"
+	},
+	"ftp": {
+		"host": "",
+		"user": "",
+		"password": "",
+		"workdir": ""
+	},
+	"bemtree": {
+		"from": "./src/**/*.html",
+		"to": "src/blocks",
+		"omit": "@@,js-,active,col,row,container,-xl,-lg,-md,-sm,-xs"
+	}
+}

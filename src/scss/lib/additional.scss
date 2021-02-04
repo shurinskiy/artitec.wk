@@ -111,22 +111,17 @@ $dark: #484848;
 }
 
 @mixin outline($color: grey) { 
-	outline: 1px dotted $color; 
+	outline: 1px dotted $color;
 } 
 
 /* показать текущий диапазон */
 @mixin screen-media($color: #777) {
 	$breakpoints: (
-		xxxxlg: 1920,
-		xxxlg: 1680,
-		xxlg: 1440,
-		xlg: 1280,
-		lg: 1100,
-		md: 960,
-		sm: 780,
-		xs: 640,
-		xxs: 480,
-		xxxs: 360
+		xl: 1960,
+		lg: 1200,
+		md: 992,
+		sm: 768,
+		xs: 576
 	);
 	& {
 		position: relative;		

@@ -1,0 +1,15 @@
+<div class="card @@if(this.class){@@class}">
+	<div class="card__inner" @@if(this.red){data-red="новинка!"} @@if(this.blue){data-blue="выгодно!"}>
+		<a href="./details.html" class="card__image"><img src="./images/@@img" alt=""></a>
+		<p class="card__category">Категория: @@cat</p>
+		<h2 class="card__title">@@title</h2>
+		<p class="card__author">Автор: @@author</p>
+		<p class="card__price">
+			от @@if(this.discount){<span>2 400 р.</span>} <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_deffered @@if(this.deffered){active}">Отложено</a>
+		</div>
+	</div>
+</div>

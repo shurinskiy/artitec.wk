@@ -1,5 +1,56 @@
 @@include("_head.html", {"bodyclass":"home"}) 
 @@include("_header.html") 
 
+<section class="action">
+	<div class="wrapper">
+		<div class="action__inner">
+			<span>-25%</span> <strong>НА ВСЕ ХОЛСТЫ!</strong> ДО КОНЦА АКЦИИ ОСТАЛОСЬ: <strong>1 д : 10 ч : 25 м : 15 с</strong>
+		</div>
+	</div>
+</section>
+
+<section class="advice">
+	<div class="wrapper">
+		<h2 class="advice__title">Рекомендуем</h2>
+		<div class="advice__set">
+			<div class="advice__set-row row">
+				@@loop("_card.html", [{
+					"class": "advice__set-card col-3",
+					"img": "card-image-1.png",
+					"cat": "Холсты",
+					"title": "Доллары россыпью на столе",
+					"author": "Илья Дровнин",
+					"red": true
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-2.png",
+					"cat": "Холсты",
+					"title": "Лавандовые поля",
+					"author": "Клод Монэ"
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-3.png",
+					"cat": "Постеры",
+					"title": "Карнавал",
+					"author": "Хуан Пердидез",
+					"deffered": true,
+					"blue": true
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-4.png",
+					"cat": "Холсты",
+					"title": "Нос и губы в рамке под натуральное дерево",
+					"author": "Неизвестный",
+					"discount": true
+				}])
+			</div>
+		</div>
+		<a class="advice__button" href="./">Смотреть все новинки</a>
+	</div>
+</section>
+
 
 @@include("_bottom.html") 

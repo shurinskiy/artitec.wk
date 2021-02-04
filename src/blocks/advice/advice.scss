@@ -1,0 +1,44 @@
+.advice {
+	$self: &;
+
+	&__title {
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #484848;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	&__set {
+		margin-bottom: 35px;
+	}
+
+	&__set-row {
+
+	}
+
+	&__set-card {
+
+	}
+
+	&__button {
+		display: block;
+		appearance: none;
+		background: none;
+		outline: none;
+		border: none;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		white-space: nowrap;
+		font-size: 16px;
+		line-height: 1.1;
+		color: #6e6e6e;
+		border: 1px solid #6e6e6e;
+		padding: 8px 25px;
+		cursor: pointer;
+		max-width: 245px;
+		margin: 0 auto 70px;
+	}
+
+}

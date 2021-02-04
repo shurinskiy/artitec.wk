@@ -1,0 +1,124 @@
+.card {
+	$self: &;
+	max-width: 330px;
+	
+	&__inner {
+		padding: 5px;
+		border: 1px solid #ebebeb;
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		height: 100%;
+		position: relative;
+		transition: box-shadow 0.3s ease-in;
+
+		&::before {
+			position: absolute;
+			top: 0px; left: 0px;
+			text-transform: uppercase;
+			font-family: "SB", sans-serif;
+			font-size: 14px;
+			line-height: 1.1;
+			padding: 3px 7px 5px;
+			box-shadow: 1px 1px 5px #555;
+			border-bottom-right-radius: 10px;
+			color: #fff;
+		}
+
+		&[data-red]::before {
+			content: attr(data-red);
+			background-color: $red;
+		}
+		
+		&[data-blue]::before {
+			content: attr(data-blue);
+			background-color: $blue;
+		}
+			
+		&:hover {
+			box-shadow: 1px 1px 10px #b3b3b3;
+		}
+	}
+
+	&__image {
+		display: block;
+		margin-bottom: 10px;
+		
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	&__category {
+		font-family: "SL", sans-serif;
+		font-size: 12px;
+		line-height: 1.1;
+		color: #6e6e6e;
+	}
+
+	&__title {
+		font-size: 18px;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+
+	&__author {
+		margin-top: auto;
+		font-family: "SL", sans-serif;
+		font-size: 12px;
+		line-height: 1.1;
+		color: #6e6e6e;
+		margin-bottom: 30px;
+	}
+
+	&__price {
+		margin-bottom: 25px;		
+		span {
+			display: inline-block;
+			font-family: "SL", sans-serif;
+			font-size: 24px;
+			color: $red;
+			text-decoration: line-through;
+			margin-right: 4px;
+		}
+
+		strong {
+			font-family: "SB", sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		margin-bottom: 7px;
+	}
+
+	&__button {
+		box-sizing: border-box;
+		width: 50%;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&_more {
+			background-color: $red;
+			color: #fff;
+			padding: 8px;
+		}
+		
+		&_deffered {
+			padding: 8px 8px 8px 40px;
+			border: 1px solid #6e6e6e;
+			color: #6e6e6e;
+			background: url('./images/icon-utility-deferred-grey.png') left 12px center / auto no-repeat transparent;
+			
+			&.active {
+				border: 1px solid $red;
+				color: $red;
+				background: url('./images/icon-utility-deferred.png') left 12px center / auto no-repeat transparent;
+
+			}
+		}
+	}
+}

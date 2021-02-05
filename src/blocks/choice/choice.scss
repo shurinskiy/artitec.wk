@@ -1,0 +1,76 @@
+.choice {
+	$self: &;
+	margin-bottom: 50px;
+
+	&__title {
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #484848;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	&__items {
+		box-sizing: border-box;
+		background-color: $grey;
+		padding: 15px 55px;
+
+		.owl-stage-outer {
+			box-sizing: border-box;
+			padding: 10px;
+			margin: 0 -10px;
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		display: block;
+		padding: 5px;
+		background-color: #fff;
+		text-align: center;
+		text-decoration: none;
+		color: #000;
+		transition: box-shadow 0.3s ease-in;
+
+		&:hover {
+			box-shadow: 0px 0px 8px #656565;
+		}
+	}
+
+	&__image {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto 20px;
+	}
+
+	&__name {
+		text-transform: uppercase;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__prev, &__next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		background: none;
+		outline: none;
+		border: none;
+		padding: 0;
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+	}
+
+	&__next {
+		right: 10px;
+		background: url('./images/arr-right.svg') right 11px center / auto no-repeat #bfbfbf;
+	}
+	
+	&__prev {
+		left: 10px;
+		background: url('./images/arr-left.svg') left 11px center / auto no-repeat #bfbfbf;
+	}
+
+}

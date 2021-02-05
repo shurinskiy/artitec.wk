@@ -64,6 +64,6 @@
 	"bemtree": {
 		"from": "./src/**/*.html",
 		"to": "src/blocks",
-		"omit": "@@,js-,active,col,row,container,-xl,-lg,-md,-sm,-xs"
+		"omit": "@@,js-,owl-carousel,active,col,row,container,-xl,-lg,-md,-sm,-xs"
 	}
 }

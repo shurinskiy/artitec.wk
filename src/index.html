@@ -27,7 +27,9 @@
 					"img": "card-image-2.png",
 					"cat": "Холсты",
 					"title": "Лавандовые поля",
-					"author": "Клод Монэ"
+					"author": "Клод Монэ",
+					"deffered": true,
+					"red": true
 				},
 				{
 					"class": "advice__set-card col-3",
@@ -35,8 +37,7 @@
 					"cat": "Постеры",
 					"title": "Карнавал",
 					"author": "Хуан Пердидез",
-					"deffered": true,
-					"blue": true
+					"red": true
 				},
 				{
 					"class": "advice__set-card col-3",
@@ -44,11 +45,82 @@
 					"cat": "Холсты",
 					"title": "Нос и губы в рамке под натуральное дерево",
 					"author": "Неизвестный",
-					"discount": true
+					"red": true
 				}])
 			</div>
 		</div>
 		<a class="advice__button" href="./">Смотреть все новинки</a>
+		<div class="advice__set">
+			<div class="advice__set-row row">
+				@@loop("_card.html", [{
+					"class": "advice__set-card col-3",
+					"img": "card-image-4.png",
+					"cat": "Холсты",
+					"title": "Доллары россыпью на столе",
+					"author": "Илья Дровнин",
+					"blue": true,
+					"discount": true
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-3.png",
+					"cat": "Холсты",
+					"title": "Лавандовые поля",
+					"author": "Клод Монэ",
+					"blue": true,
+					"discount": true
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-1.png",
+					"cat": "Постеры",
+					"title": "Карнавал",
+					"author": "Хуан Пердидез",
+					"deffered": true,
+					"blue": true,
+					"discount": true
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-2.png",
+					"cat": "Холсты",
+					"title": "Нос и губы в рамке под натуральное дерево",
+					"author": "Неизвестный",
+					"blue": true,
+					"discount": true
+				}])
+			</div>
+		</div>
+		<a class="advice__button" href="./">Смотреть все скидки</a>
+	</div>
+</section>
+
+
+<section class="choice">
+	<div class="wrapper">
+		<h2 class="choice__title">Выбираем картину</h2>
+		<div class="choice__items owl-carousel">
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для кухни</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для гостинной</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для детской</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для офиса</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для ресторана</h3>
+			</a>
+		</div>
 	</div>
 </section>
 

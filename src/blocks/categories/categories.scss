@@ -1,0 +1,55 @@
+.categories {
+	$self: &;
+	margin-bottom: 35px;
+
+	&__item {
+
+		h3 {
+			display: inline-block;
+			font-family: "SSB", sans-serif;
+			font-size: 18px;
+			line-height: 1.1;
+			text-transform: uppercase;
+			position: relative;
+			padding-right: 15px;
+			margin-bottom: 10px;
+			cursor: pointer;
+			
+			&::after {
+				display: block;
+				content: '';
+				width: 8px;
+				height: 5px;
+				background: url('./images/select-arr-down.svg') center / 8px 5px no-repeat transparent;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		& #{$self}__subitems {
+			display: none;
+		}
+
+		&:first-of-type #{$self}__subitems {
+			display: block;
+		}
+	}
+	
+	&__subitems {
+		padding: 0 10px 10px 40px;
+	}
+	
+	&__subitem {
+		display: block;
+		color: #000;
+		text-decoration: none;
+		font-family: "SL", sans-serif;
+		transition: color 0.2s ease-in;
+		
+		&:hover {
+			color: $blue;
+		}
+	}
+}

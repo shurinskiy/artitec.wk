@@ -1,0 +1,40 @@
+.pagination {
+	$self: &;
+	font-family: "SL", sans-serif;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+
+	&__item {
+		text-decoration: none;
+		color: #000;
+		margin: 0 5px;
+
+		&:hover, &_current {
+			color: $blue;
+		}
+	}
+
+
+	&__next, &__prev {
+		width: 17px;
+		height: 17px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+	
+	&__next {
+		margin-left: 10px;
+		background: url('./images/arr-right.svg') center / 5px 11px no-repeat transparent;
+	}
+	
+	&__prev {
+		margin-right: 10px;
+		background: url('./images/arr-left.svg') center / 5px 11px no-repeat transparent;
+	}
+
+	&__pass {
+
+	}
+
+}

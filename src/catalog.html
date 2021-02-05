@@ -1,0 +1,140 @@
+@@include("_head.html")
+@@include("_header.html")
+@@include("_action.html")
+@@include("_breadcrumbs.html", {"class":"col-9 offset-3"}) 
+
+<main class="main">
+	<div class="wrapper">
+		<div class="main__inner row">
+			<side class="main__sidebar col-3">
+				@@include("_filters.html", {"class":"main__sidebar-item"})
+			</side>
+			<div class="main__content catalog col-9">
+				<div class="catalog__top">
+					<div class="catalog__title">Каталог</div>
+					<div class="catalog__sort">
+						<div class="catalog__sort-item">
+							<span>показывать</span>
+							<select name="">
+								<option value="15">по 15</option>
+								<option value="25">по 25</option>
+								<option value="35">по 35</option>
+								<option value="45">по 45</option>
+							</select>
+						</div>
+						<div class="catalog__sort-item">
+							<span>сортировать</span>
+							<select name="">
+								<option value="1">сначала новинки</option>
+								<option value="2">сначала старые</option>
+							</select>
+						</div>
+					</div>
+					@@include("_pagination.html", {"class":"catalog__top-pagination"}) 
+				</div>
+				<div class="catalog__items row">
+					@@loop("_card.html", [{
+						"class": "catalog__item col-4",
+						"img": "card-image-1.png",
+						"cat": "Холсты",
+						"title": "Доллары россыпью на столе",
+						"author": "Илья Дровнин",
+						"red": true
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-2.png",
+						"cat": "Холсты",
+						"title": "Лавандовые поля",
+						"author": "Клод Монэ",
+						"deffered": true,
+						"red": true
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-4.png",
+						"cat": "Холсты",
+						"title": "Нос и губы в рамке под натуральное дерево",
+						"author": "Неизвестный",
+						"red": true
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-3.png",
+						"cat": "Постеры",
+						"title": "Карнавал",
+						"author": "Хуан Пердидез",
+						"red": true
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-4.png",
+						"cat": "Холсты",
+						"title": "Доллары россыпью на столе",
+						"author": "Илья Дровнин",
+						"blue": true,
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-3.png",
+						"cat": "Холсты",
+						"title": "Лавандовые поля",
+						"author": "Клод Монэ",
+						"blue": true,
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-1.png",
+						"cat": "Постеры",
+						"title": "Карнавал",
+						"author": "Хуан Пердидез",
+						"deffered": true,
+						"blue": true,
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-2.png",
+						"cat": "Холсты",
+						"title": "Нос и губы в рамке под натуральное дерево",
+						"author": "Неизвестный",
+						"blue": true,
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-4.png",
+						"cat": "Холсты",
+						"title": "Доллары россыпью на столе",
+						"author": "Илья Дровнин",
+						"blue": true,
+						"discount": true
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-3.png",
+						"cat": "Холсты",
+						"title": "Лавандовые поля",
+						"author": "Клод Монэ",
+						"blue": true,
+						"discount": true
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-1.png",
+						"cat": "Постеры",
+						"title": "Карнавал",
+						"author": "Хуан Пердидез",
+						"deffered": true,
+						"blue": true,
+						"discount": true
+					},{
+						"class": "catalog__item col-4",
+						"img": "card-image-2.png",
+						"cat": "Холсты",
+						"title": "Нос и губы в рамке под натуральное дерево",
+						"author": "Неизвестный",
+						"blue": true,
+						"discount": true
+					}])
+	
+				</div>
+				<div class="catalog__bottom">
+					<span class="catalog__showed">Показано с 1 по 15 из 460 (всего 31 страниц)</span>
+					@@include("_pagination.html", {"class":"catalog__bottom-pagination"}) 
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+@@include("_manufacture.html")
+@@include("_bottom.html")

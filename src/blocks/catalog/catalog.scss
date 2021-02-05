@@ -1,0 +1,91 @@
+.catalog {
+	$self: &;
+
+	&__top {
+		display: flex;
+		margin-bottom: 20px;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 24px;
+		text-transform: uppercase;
+		margin-right: auto;
+	}
+
+	&__sort {
+		display: flex;
+		align-items: center;
+	}
+	
+	&__sort-item {
+		display: flex;
+		box-sizing: border-box;
+		position: relative;
+		font-size: 12px;
+		line-height: 17px;
+		color: #000;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		margin-right: 25px;
+		height: 20px;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 10px;
+			height: 6px;
+			background: url('./images/arr-down.svg') center / 10px 5px no-repeat transparent;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		span {
+			box-sizing: border-box;
+			display: inline-block;
+			background-color: #eee;
+			border-right: 1px solid #ccc;
+			padding: 0 10px;
+			height: 100%;
+			border-radius: 5px 0 0 5px;
+			overflow: hidden;
+		}
+		
+		select {
+			border-radius: 5px;
+			box-sizing: border-box;
+			appearance: none;
+			outline: none;
+			border: none;
+			padding: 0 25px 3px 10px;
+		}
+	}
+
+	&__top-pagination {
+
+	}
+
+	&__items {
+
+	}
+
+	&__item {
+		margin-bottom: 80px;
+	}
+
+	&__bottom {
+		display: flex;
+		margin-top: -30px;
+	}
+
+	&__showed {
+		margin-right: auto;
+	}
+
+	&__bottom-pagination {
+
+	}
+
+}

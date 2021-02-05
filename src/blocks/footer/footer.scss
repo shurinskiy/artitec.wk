@@ -4,6 +4,17 @@
 	color: #fff;
 	padding: 40px 0 15px;
 
+	a {
+		text-decoration: none;
+		color: #fff;
+		transition: color 0.2s ease-in;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+
+
 	&__inner {
 		padding: 0 20px;
 		display: flex;

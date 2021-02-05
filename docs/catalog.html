@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body class="home">
- 
+<body class="">
+
 <header class="header"> 
 	<div class="wrapper">
 		<div class="header__inner">
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 	</div>
-</header> 
+</header>
 <section class="action">
 	<div class="wrapper">
 		<div class="action__inner">
@@ -69,15 +69,137 @@
 		</div>
 	</div>
 </section>
+
+<div class="breadcrumbs">
+	<div class="wrapper">
+		<div class="breadcrumbs__inner row">
+			<div class="breadcrumbs__links col-9 offset-3">
+				<a href="./" class="breadcrumbs__link">Главная</a>
+				<span>&gt;</span>
+				<span class="breadcrumbs__link breadcrumbs__link_current">Каталог</span>
+			</div>
+		</div>
+	</div>
+</div> 
+
+<main class="main">
+	<div class="wrapper">
+		<div class="main__inner row">
+			<side class="main__sidebar col-3">
+				<div class="main__sidebar-item categories">
+	<div class="categories__item">
+		<h3>Холсты</h3>
+		<div class="categories__subitems">
+			<a class="categories__subitem" href="./">Абстракции</a>
+			<a class="categories__subitem" href="./">Города</a>
+			<a class="categories__subitem" href="./">Животные</a>
+			<a class="categories__subitem" href="./">Пейзаж</a>
+			<a class="categories__subitem" href="./">Ретро</a>
+			<a class="categories__subitem" href="./">Фильмы</a>
+		</div>
+	</div>
+	<div class="categories__item">
+		<h3>Постеры</h3>
+		<div class="categories__subitems">
+			<a class="categories__subitem" href="./">Города</a>
+			<a class="categories__subitem" href="./">Пейзаж</a>
+			<a class="categories__subitem" href="./">Ретро</a>
+			<a class="categories__subitem" href="./">Фильмы</a>
+		</div>
+	</div>
+	<div class="categories__item">
+		<h3>Модульные</h3>
+		<div class="categories__subitems">
+			<a class="categories__subitem" href="./">Города</a>
+			<a class="categories__subitem" href="./">Пейзаж</a>
+			<a class="categories__subitem" href="./">Ретро</a>
+			<a class="categories__subitem" href="./">Фильмы</a>
+		</div>
+	</div>
+</div>
+<div class="main__sidebar-item filter">
+	<h3 class="filter__title">Ориентация</h3>
+	<div class="filter__items">
+		<label class="filter__item"><input type="radio" name="orient"> все</label>
+		<label class="filter__item"><input type="radio" name="orient"> горизонтальные</label>
+		<label class="filter__item"><input type="radio" name="orient"> вертикальные</label>
+		<label class="filter__item"><input type="radio" name="orient"> квадратные</label>
+	</div>
+</div>
+<div class="main__sidebar-item filter">
+	<h3 class="filter__title">Основной цвет</h3>
+	<div class="filter__items">
+		<label class="filter__item">
+			<input type="radio" name="color">
+			<span>все</span>
+		</label>
+		<label class="filter__item">
+			<input type="radio" name="color">
+			<span class="filter__color filter__color_bw"></span>
+			<span>черно-белый</span>
+		</label>
+		<label class="filter__item">
+			<input type="radio" name="color">
+			<span class="filter__color filter__color_red"></span>
+			<span>красный</span>
+		</label>
+		<label class="filter__item">
+			<input type="radio" name="color">
+			<span class="filter__color filter__color_green"></span>
+			<span>зеленый</span>
+		</label>
+		<label class="filter__item">
+			<input type="radio" name="color">
+			<span class="filter__color filter__color_blue"></span>
+			<span>синий</span>
+		</label>
+		<label class="filter__item">
+			<input type="radio" name="color">
+			<span class="filter__color filter__color_yellow"></span>
+			<span>желтый</span>
+		</label>
+	</div>
+</div>
+
+
+
+			</side>
+			<div class="main__content catalog col-9">
+				<div class="catalog__top">
+					<div class="catalog__title">Каталог</div>
+					<div class="catalog__sort">
+						<div class="catalog__sort-item">
+							<span>показывать</span>
+							<select name="">
+								<option value="15">по 15</option>
+								<option value="25">по 25</option>
+								<option value="35">по 35</option>
+								<option value="45">по 45</option>
+							</select>
+						</div>
+						<div class="catalog__sort-item">
+							<span>сортировать</span>
+							<select name="">
+								<option value="1">сначала новинки</option>
+								<option value="2">сначала старые</option>
+							</select>
+						</div>
+					</div>
+					<div class="pagination catalog__top-pagination">
+	<a href="./" class="pagination__prev"></a>
+	<a href="./" class="pagination__item active">1</a>
+	<span class="pagination__pass">...</span>
+	<a href="./" class="pagination__item">4</a>
+	<a href="./" class="pagination__item pagination__item_current">5</a>
+	<a href="./" class="pagination__item">6</a>
+	<span class="pagination__pass">...</span>
+	<a href="./" class="pagination__item">31</a>
+	<a href="./" class="pagination__next"></a>
+</div>
  
-
-
-<section class="advice">
-	<div class="wrapper">
-		<h2 class="advice__title">Рекомендуем</h2>
-		<div class="advice__set">
-			<div class="advice__set-row row">
-				<div class="card advice__set-card col-3">
+				</div>
+				<div class="catalog__items row">
+					<div class="card catalog__item col-4">
 	<div class="card__inner" data-red="новинка!" >
 		<a href="./details.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -92,7 +214,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner" data-red="новинка!" >
 		<a href="./details.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -107,22 +229,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
-	<div class="card__inner" data-red="новинка!" >
-		<a href="./details.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
-		<p class="card__category">Категория: Постеры</p>
-		<h2 class="card__title">Карнавал</h2>
-		<p class="card__author">Автор: Хуан Пердидез</p>
-		<p class="card__price">
-			от  <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_deffered ">Отложено</a>
-		</div>
-	</div>
-</div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner" data-red="новинка!" >
 		<a href="./details.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -137,13 +244,22 @@
 		</div>
 	</div>
 </div>
-
-			</div>
+<div class="card catalog__item col-4">
+	<div class="card__inner" data-red="новинка!" >
+		<a href="./details.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
+		<p class="card__category">Категория: Постеры</p>
+		<h2 class="card__title">Карнавал</h2>
+		<p class="card__author">Автор: Хуан Пердидез</p>
+		<p class="card__price">
+			от  <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_deffered ">Отложено</a>
 		</div>
-		<a class="advice__button" href="./">Смотреть все новинки</a>
-		<div class="advice__set">
-			<div class="advice__set-row row">
-				<div class="card advice__set-card col-3">
+	</div>
+</div>
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -158,7 +274,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -173,7 +289,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
 		<p class="card__category">Категория: Постеры</p>
@@ -188,7 +304,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -203,13 +319,7 @@
 		</div>
 	</div>
 </div>
-
-			</div>
-		</div>
-		<a class="advice__button" href="./">Смотреть все хиты</a>
-		<div class="advice__set">
-			<div class="advice__set-row row">
-				<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -224,7 +334,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -239,7 +349,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
 		<p class="card__category">Категория: Постеры</p>
@@ -254,7 +364,7 @@
 		</div>
 	</div>
 </div>
-<div class="card advice__set-card col-3">
+<div class="card catalog__item col-4">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -270,48 +380,27 @@
 	</div>
 </div>
 
+	
+				</div>
+				<div class="catalog__bottom">
+					<span class="catalog__showed">Показано с 1 по 15 из 460 (всего 31 страниц)</span>
+					<div class="pagination catalog__bottom-pagination">
+	<a href="./" class="pagination__prev"></a>
+	<a href="./" class="pagination__item active">1</a>
+	<span class="pagination__pass">...</span>
+	<a href="./" class="pagination__item">4</a>
+	<a href="./" class="pagination__item pagination__item_current">5</a>
+	<a href="./" class="pagination__item">6</a>
+	<span class="pagination__pass">...</span>
+	<a href="./" class="pagination__item">31</a>
+	<a href="./" class="pagination__next"></a>
+</div>
+ 
+				</div>
 			</div>
 		</div>
-		<a class="advice__button" href="./">Смотреть все скидки</a>
 	</div>
-</section>
-
-<section class="choice">
-	<div class="wrapper">
-		<h2 class="choice__title">Выбираем картину</h2>
-		<div class="choice__items owl-carousel">
-			<a href="./" class="choice__item">
-				<img src="./images/choise-painting.png" alt="" class="choice__image">
-				<h3 class="choice__name">Для кухни</h3>
-			</a>
-			<a href="./" class="choice__item">
-				<img src="./images/choise-painting.png" alt="" class="choice__image">
-				<h3 class="choice__name">Для гостинной</h3>
-			</a>
-			<a href="./" class="choice__item">
-				<img src="./images/choise-painting.png" alt="" class="choice__image">
-				<h3 class="choice__name">Для детской</h3>
-			</a>
-			<a href="./" class="choice__item">
-				<img src="./images/choise-painting.png" alt="" class="choice__image">
-				<h3 class="choice__name">Для офиса</h3>
-			</a>
-			<a href="./" class="choice__item">
-				<img src="./images/choise-painting.png" alt="" class="choice__image">
-				<h3 class="choice__name">Для ресторана</h3>
-			</a>
-		</div>
-	</div>
-</section>
-
-<section class="banner">
-	<div class="wrapper">
-		<div class="banner__inner">
-
-		</div>
-	</div>
-</section>
-
+</main>
 
 <section class="manufacture">
 	<div class="wrapper">
@@ -336,7 +425,7 @@
 		</div>
 	</div>
 </section>
- 
+
 <footer class="footer"> 
 	<div class="wrapper">
 		<div class="footer__inner">
@@ -370,4 +459,3 @@
 <script src="common.js"></script> 
 </body> 
 </html> 
- 

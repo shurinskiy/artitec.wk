@@ -1,3 +1,3 @@
-// import "../blocks/someblock/someblock.js";
 import "../blocks/choice/choice.js";
+import "../blocks/manufacture/manufacture.js";
 

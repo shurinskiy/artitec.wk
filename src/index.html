@@ -59,6 +59,44 @@
 					"title": "Доллары россыпью на столе",
 					"author": "Илья Дровнин",
 					"blue": true,
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-3.png",
+					"cat": "Холсты",
+					"title": "Лавандовые поля",
+					"author": "Клод Монэ",
+					"blue": true,
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-1.png",
+					"cat": "Постеры",
+					"title": "Карнавал",
+					"author": "Хуан Пердидез",
+					"deffered": true,
+					"blue": true,
+				},
+				{
+					"class": "advice__set-card col-3",
+					"img": "card-image-2.png",
+					"cat": "Холсты",
+					"title": "Нос и губы в рамке под натуральное дерево",
+					"author": "Неизвестный",
+					"blue": true,
+				}])
+			</div>
+		</div>
+		<a class="advice__button" href="./">Смотреть все хиты</a>
+		<div class="advice__set">
+			<div class="advice__set-row row">
+				@@loop("_card.html", [{
+					"class": "advice__set-card col-3",
+					"img": "card-image-4.png",
+					"cat": "Холсты",
+					"title": "Доллары россыпью на столе",
+					"author": "Илья Дровнин",
+					"blue": true,
 					"discount": true
 				},
 				{
@@ -95,7 +133,6 @@
 	</div>
 </section>
 
-
 <section class="choice">
 	<div class="wrapper">
 		<h2 class="choice__title">Выбираем картину</h2>
@@ -123,6 +160,39 @@
 		</div>
 	</div>
 </section>
+
+<section class="banner">
+	<div class="wrapper">
+		<div class="banner__inner">
+
+		</div>
+	</div>
+</section>
+
+<section class="manufacture">
+	<div class="wrapper">
+		<div class="manufacture__inner">
+			<div class="manufacture__side">
+				<h1 class="manufacture__title">Наше производство</h1>
+				<div class="manufacture__text">
+					<p>Декор стен важен для любого интерьера. Если вы хотите купить картины для дома, офиса, ресторана, отеля, салона красоты или напечатать фотографии для дома или для выставки – вам в студию Артитэк!</p>
+					<p>Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем репродукции картин и помогаем оформлять интерьеры</p>
+					<p>Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем репродукции картин и помогаем оформлять интерьеры.</p>
+				</div>
+				<a class="manufacture__button" href="./">Заказать</a>
+			</div>
+			<div class="manufacture__slider owl-carousel">
+				<div class="manufacture__slider-item">
+					<img src="./images/slider-image.png" alt="">
+				</div>
+				<div class="manufacture__slider-item">
+					<img src="./images/slider-image.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 
 @@include("_bottom.html") 

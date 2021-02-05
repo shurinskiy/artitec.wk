@@ -1,6 +1,6 @@
 .choice {
 	$self: &;
-	margin-bottom: 50px;
+	margin-bottom: 59px;
 
 	&__title {
 		font-size: 24px;
@@ -13,7 +13,7 @@
 	&__items {
 		box-sizing: border-box;
 		background-color: $grey;
-		padding: 15px 55px;
+		padding: 9px 55px;
 
 		.owl-stage-outer {
 			box-sizing: border-box;
@@ -61,6 +61,7 @@
 		width: 38px;
 		height: 38px;
 		border-radius: 50%;
+		z-index: 1;
 	}
 
 	&__next {

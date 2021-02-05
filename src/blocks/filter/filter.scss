@@ -19,9 +19,26 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 2px;
+		cursor: pointer;
 
-		input {
-			margin-right: 5px;
+		input[type="radio"] {
+			display: none;
+			&:checked + span:first-of-type::before {
+				background: transparent svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5px" height="5px"><path fill-rule="evenodd" fill="rgb(0, 161, 229)" d="M2.500,-0.000 C3.881,-0.000 5.000,1.119 5.000,2.500 C5.000,3.881 3.881,5.000 2.500,5.000 C1.119,5.000 -0.000,3.881 -0.000,2.500 C-0.000,1.119 1.119,-0.000 2.500,-0.000 Z"/></svg>') no-repeat center;
+			}
+		}
+
+		span:first-of-type::before {
+			content: "";
+			display: inline-block;
+			box-sizing: border-box;
+			width: 9px;
+			height: 9px;
+			background-color: #fff;
+			border: 1px solid #484848;
+			border-radius: 50%;
+			vertical-align: middle;
+			margin-right: 8px;
 		}
 
 		&[style*="display: block"] {
@@ -30,30 +47,36 @@
 	}
 
 	&__color {
-		display: block;
-		margin-right: 5px;
-		border: 7px solid transparent;
+		display: flex;
+		align-items: center;
 		
-		&_bw {
+		&::before {
+			content: '';
+			display: inline-block;
+			margin-right: 5px;
+			border: 7px solid transparent;
+		}
+		
+		&_bw::before {
 			border-left: 7px solid #000;
 			border-top: 7px solid  #000;
 			border-right: 7px solid #cdcdcd;
 			border-bottom: 7px solid  #cdcdcd;
 		}
 		
-		&_blue {
+		&_blue::before {
 			border-color: #0016e5;
 		}
 		
-		&_green {
+		&_green::before {
 			border-color: #48e500;
 		}
 		
-		&_red {
+		&_red::before {
 			border-color: #e50000;
 		}
 		
-		&_yellow {
+		&_yellow::before {
 			border-color: #e5d100;
 		}
 	}

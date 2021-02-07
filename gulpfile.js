@@ -17,9 +17,9 @@ let webconf = {
 			test: /\.js$/,
 			exclude: /(node_modules|bower_components)/,
 			use: {
-					loader: 'babel-loader',
-					options: { presets: ['@babel/preset-env'] }
-				}
+				loader: 'babel-loader',
+				options: { presets: ['@babel/preset-env'] }
+			}
 		}]
 	},
 	externals: {
@@ -53,8 +53,8 @@ let pth = {
 	},
 	wtch: {
 		html: './src/**/*.html',
-		js: ['./src/js/**/*.js','./src/blocks/**/*.js'],
-		css: ['./src/scss/**/*.scss','./src/blocks/**/*.scss'],
+		js: ['./src/js/**/*.js', './src/blocks/**/*.js'],
+		css: ['./src/scss/**/*.scss', './src/blocks/**/*.scss'],
 		img: './src/images/**/!(icon-*.svg|shape-*.svg)',
 		shp: './src/images/**/shape-*.svg',
 		icn: './src/images/**/icon-*.svg',
@@ -62,7 +62,7 @@ let pth = {
 	}
 };
 
-function swallowError (error) {
+function swallowError(error) {
 	console.log(error.toString())
 	this.emit('end')
 }
@@ -77,12 +77,12 @@ function js() {
 		.on('error', swallowError)
 		.pipe(gulp.dest(pth.pbl.js))
 		.pipe($.if(isSync, $.browserSync.stream()))
-		.on('end', function() {
-			if(isRemote) deploy(true, 'js');
+		.on('end', function () {
+			if (isRemote) deploy(true, 'js');
 		});
 }
 
-function jslib () {
+function jslib() {
 	let paths = [];
 	Object.entries(pckg.externalJs).forEach(function ([key, value], index) {
 		paths[index] = `node_modules/${key}/${value}`;
@@ -111,47 +111,47 @@ function styles() {
 		.pipe($.if(isDev, $.sourcemaps.write()))
 		.pipe(gulp.dest(pth.pbl.css))
 		.pipe($.if(isSync, $.browserSync.stream()))
-		.on('end', function() {
-			if(isRemote) deploy(true, 'css');
+		.on('end', function () {
+			if (isRemote) deploy(true, 'css');
 		});
 }
 
 function images() {
-	return $.del([pth.pbl.img+'*']).then(function(paths) {
+	return $.del([pth.pbl.img + '*']).then(function (paths) {
 		gulp.src(pth.src.img)
-		.pipe(gulp.dest(pth.pbl.img))
-		.pipe($.if(isSync, $.browserSync.stream()));
+			.pipe(gulp.dest(pth.pbl.img))
+			.pipe($.if(isSync, $.browserSync.stream()));
 		console.log('Deleted files and folders:\n', paths.join('\n'));
 	});
 }
 
 function icons() {
 	return gulp.src(pth.src.icn)
-	.pipe($.svgSymbolView({
-		name: 'icons-sprite',
-		monochrome: {
-			dimgrey: '#696969',
-			white: '#ffffff'
-		}
-	}))
-	.pipe(gulp.dest(pth.pbl.img))
+		.pipe($.svgSymbolView({
+			name: 'icons-sprite',
+			monochrome: {
+				dimgrey: '#696969',
+				white: '#ffffff'
+			}
+		}))
+		.pipe(gulp.dest(pth.pbl.img))
 };
 
 function shapes() {
 	return gulp.src(pth.src.shp)
-	.pipe($.svgSymbolView('svg-sprite'))
-	.pipe(gulp.dest(pth.pbl.img))
+		.pipe($.svgSymbolView('svg-sprite'))
+		.pipe(gulp.dest(pth.pbl.img))
 };
 
 function fonts() {
-	return $.del([pth.pbl.fnts+'*']).then(function(paths) {
+	return $.del([pth.pbl.fnts + '*']).then(function (paths) {
 		gulp.src(pth.src.fnts)
-		.pipe($.fonter({
-			formats: ['woff', 'ttf', 'eot'],
-			compound2simple: true
-		  }))		
-		.pipe(gulp.dest(pth.pbl.fnts))
-		.pipe($.if(isSync, $.browserSync.stream()));
+			// .pipe($.fonter({
+			// 	formats: ['woff', 'ttf', 'eot'],
+			// 	compound2simple: true
+			// }))
+			.pipe(gulp.dest(pth.pbl.fnts))
+			.pipe($.if(isSync, $.browserSync.stream()));
 		console.log('Deleted files and folders:\n', paths.join('\n'));
 	});
 }
@@ -165,24 +165,24 @@ function deploy(e, ...args) {
 		log: $.fancyLog
 	});
 
-	args = args.length ? args : ['js','css'];
-	args.forEach(function(item, i) {
-		this[i] = pth.pbl[item]+'*.'+item;
+	args = args.length ? args : ['js', 'css'];
+	args.forEach(function (item, i) {
+		this[i] = pth.pbl[item] + '*.' + item;
 	}, args);
 
 	if (process.argv.indexOf('--all') !== -1) {
-		return gulp.src(pth.pbl.root+'**', {base: pth.pbl.root, buffer: false})
+		return gulp.src(pth.pbl.root + '**', { base: pth.pbl.root, buffer: false })
 			.pipe(conn.newerOrDifferentSize(pckg.ftp.workdir))
 			.pipe(conn.dest(pckg.ftp.workdir));
 	} else {
-		return gulp.src(args, {base: pth.pbl.root, buffer: false})
+		return gulp.src(args, { base: pth.pbl.root, buffer: false })
 			.pipe(conn.newerOrDifferentSize(pckg.ftp.workdir))
 			.pipe(conn.dest(pckg.ftp.workdir));
 	}
 }
 
 function watch() {
-	if(isSync) {
+	if (isSync) {
 		$.browserSync.init({
 			server: { baseDir: pth.pbl.root }
 		});

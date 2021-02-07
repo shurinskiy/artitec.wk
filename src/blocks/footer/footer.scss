@@ -18,8 +18,7 @@
 	&__inner {
 		padding: 0 20px;
 		display: flex;
-		flex-flow: row wrap;
-		align-items: flex-start;
+		flex-wrap: wrap;
 	}
 
 	&__logo {
@@ -30,9 +29,6 @@
 
 	&__navi {
 		// @include outline();
-		max-width: 250px;
-		flex-grow: 1;
-		padding-right: 20px;
 		font-family: "SL", sans-serif;
 	}
 
@@ -50,8 +46,7 @@
 
 	&__info {
 		text-align: right;
-		max-width: 180px;
-		margin-left: auto;
+		max-width: 247px;
 	}
 	
 	&__info-title {
@@ -68,6 +63,12 @@
 		font-family: "CL", sans-serif;
 		font-size: 14px;
 		margin-bottom: 0;
+		white-space: nowrap;
+
+		&_city {
+			display: inline-block;
+			text-align: right;
+		}
 
 		&_adress {
 			font-style: italic;
@@ -80,4 +81,11 @@
 		margin-top: 50px;
 		font-size: 12px;
 	}
+
+	@include media-breakpoint-only(md) {  
+		&__info {
+			text-align: left;
+		}
+	}
 }
+

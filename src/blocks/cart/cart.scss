@@ -7,10 +7,6 @@
 		font-weight: 400;
 	}
 
-	&__baget {
-
-	}
-
 	&__baget-price {
 		span {
 			display: block;
@@ -39,6 +35,7 @@
 
 
 	&__baget-row {
+		display: flex;
 		label {
 			display: inline-block;
 
@@ -56,8 +53,22 @@
 		}
 	}
 
+	&__baget-answer {
+		width: 66px;
+		height: 66px;
+		position: relative;
+		cursor: pointer;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 28%;	
+			transform: translate(-50%, -50%);
+		}
+	}
+
 	&__baget-border {
-		border: 1px solid #7c7c7c;
+		border: 2px solid #7c7c7c;
 		width: 66px;
 		height: 66px;
 		position: relative;
@@ -80,7 +91,7 @@
 	}
 
 	&__baget-row input:checked + &__baget-border {
-		border: 1px solid #db0000;
+		border: 2px solid #db0000;
 	}
 
 	&__baget-title {
@@ -156,9 +167,6 @@
 	}
 
 
-	&__size {
-
-	}
 
 	&__size-select {
 		color: #1a1a1a;
@@ -195,33 +203,30 @@
 	}
 
 	&__slider {
-
 		&-item {
 			margin-bottom: 20px;
+			img {
+				border: 3px solid #e9e9e9;
+			}
+		}
+		&-btn-left, &-btn-right {
+			position: absolute;
+			bottom: 15px;
+			cursor: pointer;
+			outline: none;
+			border: none;
+			padding: 0;
+			width: 23px;
+			height: 27px;
+			z-index: 20;
 		}
 		&-btn-left {
-			position: absolute;
 			left: 0;
-			bottom: 15px;
-			outline: none;
-			border: none;
-			background: url('../../images/arr-left.svg') no-repeat;
-			background-size: contain;
-			width: 40px;
-			height: 40px;
-			cursor: pointer;
+			background: url('../../images/slider-left.png')no-repeat;
 		}
 		&-btn-right {
-			position: absolute;
 			right: 0;
-			bottom: 15px;
-			outline: none;
-			border: none;
-			background: url('../../images/arr-right.svg') no-repeat;
-			background-size: contain;
-			width: 40px;
-			height: 40px;
-			cursor: pointer;
+			background: url('../../images/slider-right.png')no-repeat;
 		}
 
 		.owl-dots {
@@ -229,13 +234,13 @@
 			justify-content: center;
 		}
 		.owl-dot {
-			background: url('./images/card-image-4.png') no-repeat !important;
-				background-size: auto;
-			width: 60px;
-			height: 60px;
+			background: url('./images/cart-img-slide.png') no-repeat !important;
+			background-size: auto;
+			width: 50px;
+			height: 50px;
 			display: inline-block;
 			background-size: cover !important;
-			margin-right: 18px;
+			margin-right: 15px;
 		}
 		.owl-dot:last-child {
 			margin-right: 0;
@@ -245,40 +250,82 @@
 	&__right-slider {
 		position: relative;
 	}
-	&__right-slider-btn {
+	&__right-slider button {
 		position: absolute;
 		top: 50%;
-		right: 0;
+		transform: translateY(-50%);
+		cursor: pointer;
 		outline: none;
 		border: none;
-		background: url('../../images/arr-right.svg') no-repeat;
-		background-size:contain;
-		width: 30px;
-		height: 30px;
-		z-index: 1000;
-		cursor: pointer;
+		padding: 0;
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		z-index: 20;
+	}
+	&__right-slider-btn {
+		right: 10px;
+		background: url('./images/arr-right.svg') right 11px center / auto no-repeat #bfbfbf;
 	}
 	&__left-slider-btn {
-		position: absolute;
-		top: 50%;
-		left: 0;
-		outline: none;
-		border: none;
-		background: url('../../images/arr-left.svg') no-repeat;
-		background-size:contain;
-		width: 30px;
-		height: 30px;
-		z-index: 1000;
-		cursor: pointer;
+		left: 10px;
+		background: url('./images/arr-left.svg') left 11px center / auto no-repeat #bfbfbf
+
 	}
 	&__sidebar-mobile {
 		display: none;
 	}
 
+
+
 	@include media-breakpoint-down(md) {
+		&__slider.owl-carousel .owl-item img {
+			width: auto;
+		}
+		// &__slider.owl-carousel.owl-loaded.owl-drag {
+		// 	display: flex;
+		// }
+		// &__slider .owl-dots {
+		// 	flex-direction: column;
+		// }
+		// &__slider .owl-dot {
+		// 	width: 70px;
+		// 	height: 70px;
+		// 	margin: 0 20px 10px;
+		// }
+		// &__slider-btn-left {
+		// 	rotate: (270deg);
+		// }
+		// &__slider-btn-right {
+
+		// 	rotate:(270deg);
+		// }
+		&__slider.owl-carousel.owl-loaded.owl-drag {
+			max-width: 440px;
+		}
+		&__slider .owl-dots {
+			max-width: 440px;
+			width: 100%;
+		}
+		&__slider-item {
+			max-width: 440px;
+		}
+		&__slider .owl-stage-outer {
+			max-width: 480px;
+		}
 		&__bottom-slider {
 			flex-direction: column-reverse;
 		}
+		&__right-slider {
+			margin-bottom: 20px;
+		}
+		&__bottom-slider {
+			text-align: center;
+			&-title {
+				display: inline-block;
+			}
+		}
+
 	}
 
 	@include media-breakpoint-down(sm) {
@@ -305,6 +352,16 @@
 		}
 		&__right-slider-item {
 			text-align: center;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		&__baget-border {
+			width: 50px;
+			height: 50px;
+		}
+		&__baget-answer {
+			width: 50px;
+			height: 50px;
 		}
 	}
 }

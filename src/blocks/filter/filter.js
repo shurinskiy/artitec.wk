@@ -13,6 +13,7 @@
 		}
 	});
 
+
 	// Показать спрятанные и убрать кнопку
 	$('.filter').on('click', '.filter__more', function () {
 		$(this)
@@ -27,5 +28,6 @@
 		e.preventDefault();
 		$('.cart__sidebar').toggleClass('cart__sidebar-active');
 	})
+
 
 })();

@@ -42,6 +42,11 @@
       navClass: ['cart__left-slider-btn', 'cart__right-slider-btn']
    })
 
+   $('.modal__popup-close').click(function () {
+      $(this).parents('.modal__fade').fadeOut();
+      return false;
+   });
+
 })();
 
 

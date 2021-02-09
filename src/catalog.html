@@ -1,13 +1,16 @@
 @@include("_head.html")
 @@include("_header.html")
 @@include("_action.html")
-@@include("_breadcrumbs.html", {"class":"col-9 offset-3"}) 
+@@include("_breadcrumbs.html", {"current": "Каталог"})
 
 <main class="main">
 	<div class="wrapper">
 		<div class="main__inner">
-			<side class="main__sidebar">
-				@@include("_filters.html", {"class":"main__sidebar-item"})
+			<side class="main__sidebar sidebar">
+				<div class="sidebar__inner">
+					<span class="sidebar__toggle"></span>
+					@@include("_filters.html", {"class":"main__sidebar-item"})
+				</div>
 			</side>
 			<div class="main__content catalog">
 				<div class="catalog__top">
@@ -30,7 +33,7 @@
 							</select>
 						</div>
 					</div>
-					@@include("_pagination.html", {"class":"catalog__top-pagination"}) 
+					@@include("_pagination.html", {"class":"catalog__top-pagination"})
 				</div>
 				<div class="catalog__items">
 					@@loop("_card.html", [{
@@ -125,11 +128,11 @@
 						"blue": true,
 						"discount": true
 					}])
-	
+
 				</div>
 				<div class="catalog__bottom">
 					<span class="catalog__showed">Показано с 1 по 15 из 460 (всего 31 страниц)</span>
-					@@include("_pagination.html", {"class":"catalog__bottom-pagination"}) 
+					@@include("_pagination.html", {"class":"catalog__bottom-pagination"})
 				</div>
 			</div>
 		</div>

@@ -6,26 +6,28 @@
 		display: flex;
 		justify-content: space-between;
 	}
-
+	
+	&__sidebar-inner {
+	}
+	
 	&__sidebar {
 		// @include outline();
 		box-sizing: border-box;
-		padding-left: 35px;
 		width: calc(99.9% / 24 * 6);
 		
 		@include media('<=md') {
 			width: calc(99.9% / 24 * 8);
 		}
 		
-		@include media('<=sm') {
+		/* @include media('<=sm') {
 			width: calc(99.9% / 24 * 11);
 		}
 		
 		@include media('<=xs') {
 			width: calc(99.9% / 24 * 12);
-		}
+		} */
 	}
-	
+
 	&__content {
 		// @include outline();
 		box-sizing: border-box;
@@ -36,11 +38,12 @@
 		}
 		
 		@include media('<=sm') {
-			width: calc(99.9% / 24 * 13);
+			// width: calc(99.9% / 24 * 13);
+			width: 100%;
 		}
 		
-		@include media('<=xs') {
+		/* @include media('<=xs') {
 			width: calc(99.9% / 24 * 12);
-		}
+		} */
 	}
 }

@@ -52,4 +52,15 @@
 			color: $blue;
 		}
 	}
+
+	/* @include media-breakpoint-down(sm) {
+		&__item {
+			h3 {
+				font-size: 16px;
+			}
+		}
+		&__subitems {
+			font-size: 14px;
+		}
+	} */
 }

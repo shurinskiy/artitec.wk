@@ -93,6 +93,10 @@
 		display: flex;
 		flex-flow: row wrap;
 		margin: 0 -8px;
+
+		@include media('<=xxs') {
+			justify-content: center;
+		}
 	}
 
 	&__item {
@@ -109,6 +113,14 @@
 		}
 
 		@include media('<=sm') {
+			width: calc(99.9% / 3 - 16px);
+		}
+
+		@include media('<=xs') {
+			width: calc(99.9% / 2 - 16px);
+		}
+
+		@include media('<=xxs') {
 			width: calc(99.9% / 1 - 16px);
 		}
 	}

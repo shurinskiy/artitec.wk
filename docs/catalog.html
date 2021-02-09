@@ -79,21 +79,23 @@
 
 <div class="breadcrumbs">
 	<div class="wrapper">
-		<div class="breadcrumbs__inner row">
-			<div class="breadcrumbs__links col-9 offset-3">
+		<div class="breadcrumbs__inner">
+			<div class="breadcrumbs__links ">
 				<a href="./" class="breadcrumbs__link">Главная</a>
 				<span>&gt;</span>
 				<span class="breadcrumbs__link breadcrumbs__link_current">Каталог</span>
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 
 <main class="main">
 	<div class="wrapper">
 		<div class="main__inner">
-			<side class="main__sidebar">
-				<div class="main__sidebar-item categories">
+			<side class="main__sidebar sidebar">
+				<div class="sidebar__inner">
+					<span class="sidebar__toggle"></span>
+					<div class="main__sidebar-item categories">
 	<div class="categories__item">
 		<h3>Холсты</h3>
 		<div class="categories__subitems">
@@ -176,6 +178,7 @@
 
 
 
+				</div>
 			</side>
 			<div class="main__content catalog">
 				<div class="catalog__top">
@@ -209,7 +212,7 @@
 	<a href="./" class="pagination__item">31</a>
 	<a href="./" class="pagination__next"></a>
 </div>
- 
+
 				</div>
 				<div class="catalog__items">
 					<div class="card catalog__item">
@@ -393,7 +396,7 @@
 	</div>
 </div>
 
-	
+
 				</div>
 				<div class="catalog__bottom">
 					<span class="catalog__showed">Показано с 1 по 15 из 460 (всего 31 страниц)</span>
@@ -408,7 +411,7 @@
 	<a href="./" class="pagination__item">31</a>
 	<a href="./" class="pagination__next"></a>
 </div>
- 
+
 				</div>
 			</div>
 		</div>
@@ -439,10 +442,12 @@
 	</div>
 </section>
 
-<footer class="footer"> 
+<footer class="footer">
 	<div class="wrapper">
 		<div class="footer__inner">
-			<a class="footer__logo" href="./"><img src="./images/footer-logo.png" alt=""></a>
+			<a class="footer__logo" href="./">
+				<img src="./images/footer-logo.png" alt="">
+			</a>
 			<div class="footer__navi">
 				<h2 class="footer__navi-title">Меню в футере 1</h2>
 				<a href="./" class="footer__navi-item">пункт</a>
@@ -459,16 +464,20 @@
 			</div>
 			<div class="footer__info">
 				<h2 class="footer__info-title">ООО "АРТИТЭК"</h2>
-				<p class="footer__info-row footer__info-row_adress">196006, Санкт-Петербург улица Заставская, дом 33 ББ </p>
+				<p class="footer__info-row footer__info-row_city">
+					<span>196006, Санкт-Петербург</span>
+				</p>
+				<p class="footer__info-row footer__info-row_adress">улица Заставская, дом 33 ББ </p>
 				<p class="footer__info-row"><span>tel.:</span><a href="tel:+78124071306">+7 (812) 407 1306</a></p>
 				<p class="footer__info-row"><span>whatsapp:</span><a href="tel:+79218994567">+7 (921) 899 4567</a></p>
 				<p class="footer__info-row"><span>e-mail:</span><a href="mailto:zakaz@artitec.ru">zakaz@artitec.ru</a></p>
 			</div>
-			<div class="footer__copyright">все права защищены &copy; artitec</div>
 		</div>
+		<div class="footer__copyright">все права защищены &copy; artitec</div>
 	</div>
-</footer> 
+</footer>
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
-<script src="common.js"></script> 
-</body> 
-</html> 
+<script src="common.js"></script>
+</body>
+
+</html>

@@ -3,14 +3,44 @@
 	margin-bottom: 100px;
 
 	&__inner {
-
+		display: flex;
+		justify-content: space-between;
 	}
 
 	&__sidebar {
+		// @include outline();
+		box-sizing: border-box;
 		padding-left: 35px;
+		width: calc(99.9% / 24 * 6);
+		
+		@include media('<=md') {
+			width: calc(99.9% / 24 * 8);
+		}
+		
+		@include media('<=sm') {
+			width: calc(99.9% / 24 * 11);
+		}
+		
+		@include media('<=xs') {
+			width: calc(99.9% / 24 * 12);
+		}
 	}
-
+	
 	&__content {
-
+		// @include outline();
+		box-sizing: border-box;
+		width: calc(99.9% / 24 * 18);
+		
+		@include media('<=md') {
+			width: calc(99.9% / 24 * 16);
+		}
+		
+		@include media('<=sm') {
+			width: calc(99.9% / 24 * 13);
+		}
+		
+		@include media('<=xs') {
+			width: calc(99.9% / 24 * 12);
+		}
 	}
 }

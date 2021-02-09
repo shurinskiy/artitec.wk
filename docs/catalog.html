@@ -13,8 +13,10 @@
 	<div class="wrapper">
 		<div class="header__inner">
 			<a class="header__logo" href="./"><img src="./images/logo.png" alt=""></a>
+			<span class="header__menu-open"></span>
 			<div class="header__side">
 				<div class="header__side-top">
+					<a class="header__logo header__logo_mobile" href="./"><img src="./images/logo.png" alt=""></a>
 					<a class="header__tel" href="tel:+78008074560">8 (800) 807 4560 <span>бесплатный звонок по России</span></a>
 					<div class="header__social">
 						<a class="header__social-item header__social-item_inst" href="./"></a>
@@ -29,6 +31,7 @@
 						<a class="header__navi-item" href="./">оплата</a>
 						<a class="header__navi-item" href="./">контакты</a>
 					</nav>
+					<span class="header__menu-close"></span>
 				</div>
 				<div class="header__side-bottom">
 					<form action="" class="header__search">
@@ -46,9 +49,13 @@
 						</div>
 					</form>
 					<div class="header__utility">
-						<a class="header__profile" href="./">Личный кабинет</a>
-						<a class="header__deffered" href="./">Отложенные <span>(1)</span></a>
-						<a class="header__cart" href="./">88 888, 00 Р</a>
+						<a class="header__utility-item header__utility-item_profile" href="./">
+							<span>Личный кабинет</span>
+						</a>
+						<a class="header__utility-item header__utility-item_deffered" href="./">
+							<span>Отложенные</span> <span>(1)</span>
+						</a>
+						<a class="header__utility-item header__utility-item_cart" href="./">88 888, 00 Р</a>
 					</div>
 				</div>
 			</div>
@@ -84,8 +91,8 @@
 
 <main class="main">
 	<div class="wrapper">
-		<div class="main__inner row">
-			<side class="main__sidebar col-3">
+		<div class="main__inner">
+			<side class="main__sidebar">
 				<div class="main__sidebar-item categories">
 	<div class="categories__item">
 		<h3>Холсты</h3>
@@ -170,7 +177,7 @@
 
 
 			</side>
-			<div class="main__content catalog col-9">
+			<div class="main__content catalog">
 				<div class="catalog__top">
 					<div class="catalog__title">Каталог</div>
 					<div class="catalog__sort">
@@ -204,8 +211,8 @@
 </div>
  
 				</div>
-				<div class="catalog__items row">
-					<div class="card catalog__item col-4">
+				<div class="catalog__items">
+					<div class="card catalog__item">
 	<div class="card__inner" data-red="новинка!" >
 		<a href="./details.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -220,7 +227,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner" data-red="новинка!" >
 		<a href="./details.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -235,7 +242,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner" data-red="новинка!" >
 		<a href="./details.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -250,7 +257,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner" data-red="новинка!" >
 		<a href="./details.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
 		<p class="card__category">Категория: Постеры</p>
@@ -265,7 +272,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -280,7 +287,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -295,7 +302,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
 		<p class="card__category">Категория: Постеры</p>
@@ -310,7 +317,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -325,7 +332,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -340,7 +347,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -355,7 +362,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
 		<p class="card__category">Категория: Постеры</p>
@@ -370,7 +377,7 @@
 		</div>
 	</div>
 </div>
-<div class="card catalog__item col-4">
+<div class="card catalog__item">
 	<div class="card__inner"  data-blue="выгодно!">
 		<a href="./details.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>

@@ -5,17 +5,35 @@
 		display: flex;
 		margin-bottom: 20px;
 		align-items: center;
+
+		@include media('<=lg') {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__title {
 		font-size: 24px;
 		text-transform: uppercase;
 		margin-right: auto;
+
+		@include media('<=lg') {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__sort {
 		display: flex;
 		align-items: center;
+
+		@include media('<=lg') {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
 	}
 	
 	&__sort-item {
@@ -61,6 +79,10 @@
 			border: none;
 			padding: 0 25px 3px 10px;
 		}
+
+		@include media('<=sm') {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__top-pagination {
@@ -68,22 +90,47 @@
 	}
 
 	&__items {
-
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 -8px;
 	}
 
 	&__item {
-		margin-bottom: 80px;
+		box-sizing: border-box;
+		margin: 0 8px 80px;
+		width: calc(99.9% / 3 - 16px);
+
+		@include media('<=lg') {
+			width: calc(99.9% / 3 - 16px);
+		}
+
+		@include media('<=md') {
+			width: calc(99.9% / 2 - 16px);
+		}
+
+		@include media('<=sm') {
+			width: calc(99.9% / 1 - 16px);
+		}
 	}
 
 	&__bottom {
 		display: flex;
 		margin-top: -30px;
+
+		@include media('<=md') {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__showed {
 		font-family: "SL", sans-serif;
 		font-size: 14px;
 		margin-right: auto;
+
+		@include media('<=md') {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__bottom-pagination {

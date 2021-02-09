@@ -14,11 +14,34 @@
 	}
 
 	&__set-row {
-
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		margin: 0 -8px;
 	}
 
 	&__set-card {
+		box-sizing: border-box;
+		margin: 0 8px 16px;
+		width: calc(99.9% / 4 - 16px);
 
+		@include media('<=lg') {
+			width: calc(99.9% / 3 - 16px);
+			&:last-child {
+				display: none;
+			}
+		}
+
+		@include media('<=sm') {
+			width: calc(99.9% / 2 - 16px);
+			&:last-child {
+				display: block;
+			}
+		}
+
+		@include media('<=xxs') {
+			width: calc(99.9% / 1 - 16px);
+		}
 	}
 
 	&__button {
@@ -40,5 +63,4 @@
 		max-width: 245px;
 		margin: 0 auto 56px;
 	}
-
 }

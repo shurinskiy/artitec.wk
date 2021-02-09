@@ -8,7 +8,7 @@
 	&__inner {
 		background-color: $blue;
 		text-align: center;
-		padding: 20px 0;
+		padding: 20px 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -28,6 +28,24 @@
 	
 			&:last-of-type {
 				margin-left: 5px;
+			}
+		}
+
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
+
+		@include media('<=xs') {
+			font-size: 16px;
+			padding-bottom: 35px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 14px;
+			padding: 10px 20px 25px;
+
+			strong:last-child {
+				margin-top: 5px;
 			}
 		}
 	}

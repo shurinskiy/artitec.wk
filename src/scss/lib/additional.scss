@@ -117,11 +117,21 @@ $dark: #484848;
 /* показать текущий диапазон */
 @mixin screen-media($color: #777) {
 	$breakpoints: (
-		xl: 1960,
-		lg: 1200,
-		md: 992,
-		sm: 768,
-		xs: 576
+		xxxxlg: 1920,
+		xxxlg: 1680,
+		xxlg: 1440,
+		xlg: 1280,
+		lg: 1100,
+		md: 960,
+		sm: 780,
+		xs: 640,
+		xxs: 480,
+		xxxs: 360
+		// xl: 1960,
+		// lg: 1200,
+		// md: 992,
+		// sm: 768,
+		// xs: 576
 	);
 	& {
 		position: relative;		
@@ -130,7 +140,7 @@ $dark: #484848;
 			display: block;
 			text-align: center;
 			position: fixed;
-			top: 30px; right: 5px;
+			top: 40px; right: 5px;
 			z-index: 9999;
 			min-height: 16px;
 			min-width: 40px;

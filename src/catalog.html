@@ -5,11 +5,11 @@
 
 <main class="main">
 	<div class="wrapper">
-		<div class="main__inner row">
-			<side class="main__sidebar col-3">
+		<div class="main__inner">
+			<side class="main__sidebar">
 				@@include("_filters.html", {"class":"main__sidebar-item"})
 			</side>
-			<div class="main__content catalog col-9">
+			<div class="main__content catalog">
 				<div class="catalog__top">
 					<div class="catalog__title">Каталог</div>
 					<div class="catalog__sort">
@@ -32,16 +32,16 @@
 					</div>
 					@@include("_pagination.html", {"class":"catalog__top-pagination"}) 
 				</div>
-				<div class="catalog__items row">
+				<div class="catalog__items">
 					@@loop("_card.html", [{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-1.png",
 						"cat": "Холсты",
 						"title": "Доллары россыпью на столе",
 						"author": "Илья Дровнин",
 						"red": true
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-2.png",
 						"cat": "Холсты",
 						"title": "Лавандовые поля",
@@ -49,35 +49,35 @@
 						"deffered": true,
 						"red": true
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-4.png",
 						"cat": "Холсты",
 						"title": "Нос и губы в рамке под натуральное дерево",
 						"author": "Неизвестный",
 						"red": true
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-3.png",
 						"cat": "Постеры",
 						"title": "Карнавал",
 						"author": "Хуан Пердидез",
 						"red": true
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-4.png",
 						"cat": "Холсты",
 						"title": "Доллары россыпью на столе",
 						"author": "Илья Дровнин",
 						"blue": true,
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-3.png",
 						"cat": "Холсты",
 						"title": "Лавандовые поля",
 						"author": "Клод Монэ",
 						"blue": true,
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-1.png",
 						"cat": "Постеры",
 						"title": "Карнавал",
@@ -85,14 +85,14 @@
 						"deffered": true,
 						"blue": true,
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-2.png",
 						"cat": "Холсты",
 						"title": "Нос и губы в рамке под натуральное дерево",
 						"author": "Неизвестный",
 						"blue": true,
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-4.png",
 						"cat": "Холсты",
 						"title": "Доллары россыпью на столе",
@@ -100,7 +100,7 @@
 						"blue": true,
 						"discount": true
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-3.png",
 						"cat": "Холсты",
 						"title": "Лавандовые поля",
@@ -108,7 +108,7 @@
 						"blue": true,
 						"discount": true
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-1.png",
 						"cat": "Постеры",
 						"title": "Карнавал",
@@ -117,7 +117,7 @@
 						"blue": true,
 						"discount": true
 					},{
-						"class": "catalog__item col-4",
+						"class": "catalog__item",
 						"img": "card-image-2.png",
 						"cat": "Холсты",
 						"title": "Нос и губы в рамке под натуральное дерево",

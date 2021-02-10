@@ -63,7 +63,7 @@
 		"workdir": ""
 	},
 	"bemtree": {
-		"from": "./src/**/*.html",
+		"from": "./src/**/!(-)*.html",
 		"to": "src/blocks",
 		"omit": "@@,js-,owl-carousel,active,col,row,container,no-gutters,offset-,-xl,-lg,-md,-sm,-xs"
 	}

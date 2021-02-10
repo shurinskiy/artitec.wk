@@ -7,10 +7,7 @@
 		justify-content: space-between;
 	}
 	
-	&__sidebar-inner {
-	}
-	
-	&__sidebar {
+	&__side {
 		// @include outline();
 		box-sizing: border-box;
 		width: calc(99.9% / 24 * 6);

@@ -1,0 +1,138 @@
+.properties {
+	$self: &;
+
+	&__title {
+		font-family: "SSB", sans-serif;
+		font-size: 18px;
+		line-height: 1.1;
+		margin-bottom: 10px;
+	}
+
+	&__size {
+		margin-bottom: 30px;
+	}
+
+	&__size-select {
+		display: inline-block;
+		background: url('./images/arr-down.svg') right 10px center / 12px 7px no-repeat transparent;
+		border: 1px solid #ddd;
+		width: 100%;
+		max-width: 300px;
+
+		select {
+			appearance: none;
+			background: none;
+			outline: none;
+			border: none;
+			width: 100%;
+			padding: 5px 10px 7px;
+			font-family: "SL", sans-serif;
+			font-size: 24px;
+			line-height: 1.1;
+		}
+	}
+
+	&__block {
+		margin-bottom: 10px;
+
+		&_note {
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 35px 0px 15px 0px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-flow: row wrap;
+
+		&:not(:first-child) {
+			padding-top: 10px;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		cursor: pointer;
+		margin-bottom: 15px;
+		
+		&:not(:last-of-type) {
+			margin-right: 20px;
+		}
+		
+		input {
+			display: none;
+
+			&:checked + img {
+				outline: 1px solid $red;
+			}
+		}
+		
+		img {
+			box-sizing: border-box;
+			display: block;
+			width: 65px;
+			height: 65px;
+			margin-bottom: 5px;
+			border: 1px solid #fff;
+			outline: 1px solid $grey;
+		}
+
+		span {
+			display: block;
+			font-family: "SL", sans-serif;
+			font-size: 14px;
+			line-height: 1.1;
+			// margin-bottom: 15px;
+		}
+
+		&_help {
+			width: 65px;
+			height: 65px;
+			position: relative;
+			
+			&::before {
+				display: block;
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background: url('./images/prop-help.svg') center / auto no-repeat #e7e7e7;
+				// transition: background-color 0.3s ease-in;
+			}
+			
+			&:hover::before {
+				background: url('./images/prop-help-white.svg') center / auto no-repeat $cyan;
+			}
+		}
+
+		&_help#{&}_note {
+			width: 32px;
+			height: 32px;
+			margin-right: 0;
+		}
+
+		&_note {
+			display: flex;
+			margin-right: 20px;
+			
+			img {
+				width: 32px;
+				height: 32px;
+				outline: none;
+				border: none;
+				margin-right: 10px;
+			}
+			span {
+				font-size: 16px;
+				text-transform: uppercase;
+				max-width: 240px;
+			}
+		}
+	}
+}

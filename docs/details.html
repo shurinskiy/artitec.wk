@@ -90,13 +90,12 @@
 </div>
 
 <main class="main">
-   <div class="wrapper">
-      <a class="cart__sidebar-mobile" href="./">
-         <span></span>
-      </a>
-      <div class="main__inner row">
-         <side class="cart__sidebar col-lg-3 col-md-3">
-            <div class="main__sidebar-item categories">
+	<div class="wrapper">
+		<div class="main__inner">
+			<side class="main__side sidebar">
+				<div class="sidebar__inner">
+					<span class="sidebar__toggle"></span>
+					<div class="sidebar-item categories">
 	<div class="categories__item">
 		<h3>Холсты</h3>
 		<div class="categories__subitems">
@@ -127,7 +126,7 @@
 		</div>
 	</div>
 </div>
-<div class="main__sidebar-item filter">
+<div class="sidebar-item filter">
 	<h3 class="filter__title">Ориентация</h3>
 	<div class="filter__items">
 		<label class="filter__item"><input type="radio" name="orient" checked><span>все</span></label>
@@ -136,7 +135,16 @@
 		<label class="filter__item"><input type="radio" name="orient"><span>квадратные</span></label>
 	</div>
 </div>
-<div class="main__sidebar-item filter">
+<div class="sidebar-item filter">
+	<h3 class="filter__title">Тип изображения</h3>
+	<div class="filter__items">
+		<label class="filter__item"><input type="radio" name="type" checked><span>все</span></label>
+		<label class="filter__item"><input type="radio" name="type"><span>фотографии</span></label>
+		<label class="filter__item"><input type="radio" name="type"><span>графика</span></label>
+		<label class="filter__item"><input type="radio" name="type"><span>репродукции</span></label>
+	</div>
+</div>
+<div class="sidebar-item filter">
 	<h3 class="filter__title">Локация</h3>
 	<div class="filter__items">
 		<label class="filter__item"><input type="radio" name="location" checked><span>все</span></label>
@@ -147,7 +155,7 @@
 		<label class="filter__item"><input type="radio" name="location"><span>для ресторана</span></label>
 	</div>
 </div>
-<div class="main__sidebar-item filter">
+<div class="sidebar-item filter">
 	<h3 class="filter__title">Основной цвет</h3>
 	<div class="filter__items">
 		<label class="filter__item">
@@ -179,323 +187,230 @@
 
 
 
-         </side>
-         <div class="main__content catalog col-lg-9 col-md-9">
-            <div class="row">
-               <div class="col-lg-6 mb-3">
-                  <h3 class="cart__title mb-3">
-                     ГОРЫ СРЕДИ ГОР
-                  </h3>
-                  <div class="cart__slider owl-carousel">
-                     <div class="cart__slider-item">
-                        <img class="img-fluid" src="./images/cart-img-slide.png" alt="">
-                     </div>
-                     <div class="cart__slider-item">
-                        <img class="img-fluid" src="./images/cart-img-slide.png" alt="">
-                     </div>
-                     <div class="cart__slider-item">
-                        <img class="img-fluid" src="./images/cart-img-slide.png" alt="">
-                     </div>
-                     <div class="cart__slider-item">
-                        <img class="img-fluid" src="./images/cart-img-slide.png" alt="">
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 mb-3">
-                  <div class="cart__custom">
-                     <div class="cart__info pb-1 mb-3">
-                        <span class="cart__info-code mb-1">Код товара:<span> pp0112</span></span>
-                        <span class="cart__info-autor">Автор:<span> Дровнин Илья</span></span>
-                     </div>
-                     <div class="cart__size mb-3">
-                        <h3 class="cart__size-title mb-2">РАЗМЕР, см</h3>
-                        <div class="cart__size-select">
-                           <select>
-                              <option value="40 х 60" selected>40 х 60</option>
-                              <option value="40 х 60">40 х 60</option>
-                              <option value="40 х 60">40 х 60</option>
-                           </select>
-                        </div>
-                     </div>
-                     <div class="cart__baget">
-                        <form action="" method="get">
-                           <h3 class="cart__baget-title mb-2">Багет для картины</h3>
-                           <div class="cart__baget-row mb-3">
-                              <label class="mr-3">
-                                 <input checked="checked" type="radio" name="baget">
-                                 <span class="cart__baget-border bg-baget-img">
-                                    <img class="img-fluid empty" src="./images/baget-empty.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">нет</span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget">
-                                 <span class="cart__baget-border">
-                                    <img class="img-fluid" src="./images/baget-simple.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">простой</span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget">
-                                 <span class="cart__baget-border">
-                                    <img class="img-fluid" src="./images/baget-classic.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">классика</span>
-                              </label>
-                              <label>
-                                 <input type="radio" name="baget">
-                                 <span class="cart__baget-border">
-                                    <img class="" src="./images/baget-classic.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">премиум</span>
-                              </label>
-                           </div>
-                           <div class="cart__baget-row mb-3">
-                              <label class="mr-3">
-                                 <input checked="checked" type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label>
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                           </div>
-                           <div class="cart__baget-row mb-3">
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label>
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                           </div>
-                           <div class="cart__baget-row mb-3">
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                              <label>
-                                 <input type="radio" name="baget-addit">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-default.png" alt="">
-                                 </span>
-                              </label>
-                           </div>
-                           <h3 class="cart__baget-title mb-2">Стекло для рамы</h3>
-                           <div class="cart__baget-row mb-3">
-                              <label class="mr-3">
-                                 <input checked="checked" type="radio" name="baget-rama">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-glass.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">да</span>
-                              </label>
-                              <span class="cart__baget-answer">
-                                 <img src="./images/baget-answer.png" alt="">
-                              </span>
-                           </div>
-                           <h3 class="cart__baget-title mb-2">Паспарту</h3>
-                           <div class="cart__baget-row mb-5">
-                              <label class="mr-3">
-                                 <input checked="checked" type="radio" name="baget-pasp">
-                                 <span class="cart__baget-border bg-baget-img">
-                                    <img class="img-fluid empty" src="./images/baget-empty.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">нет</span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-pasp">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-simple.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">белый 4 см</span>
-                              </label>
-                              <label class="mr-3">
-                                 <input type="radio" name="baget-pasp">
-                                 <span class="cart__baget-border">
-                                    <img src="./images/baget-simple.png" alt="">
-                                 </span>
-                                 <span class="cart__baget-row-text">белый 8 см</span>
-                              </label>
-                              <span class="cart__baget-answer">
-                                 <img src="./images/baget-answer.png" alt="">
-                              </span>
-                           </div>
-                           <div class="cart__baget-price mb-5">
-                              <span class="cart__baget-price-old">3500 ₽</span>
-                              <span class="cart__baget-price-new">2600 ₽</span>
-                           </div>
-                           <div class="card__buttons mb-5">
-                              <a href="./" class="card__button card__button_more">Подробнее</a>
-                              <a href="./"
-                                 class="card__button card__button_deffered ">Отложено</a>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="cart__both row mb-5">
-               <div class="cart__both-left col-lg-5">
-                  <h3 class="cart__both-title pb-1 mb-4">сроки изготовления</h3>
-                  <div class="cart__both-el pb-3 mb-3">
-                     <span>Холсты и постеры</span> <span>1-2 рабочих дня</span>
-                  </div>
-                  <div class="cart__both-el pb-3 mb-3">
-                     <span>Имитация живописи</span> <span>2-3 рабочих дня</span>
-                  </div>
-                  <div class="cart__both-el pb-3 mb-3">
-                     <span>Шторы и ширмы</span> <span>3-5 рабочих дня</span>
-                  </div>
-               </div>
-               <div class="cart__both-right col-lg-5 ml-auto">
-                  <span class="cart__both-title pb-1 mb-4">доставка</span>
-                  <p class="cart__both-bottom-subtitle">Доставляем заказы по России и всему миру в самые короткие
-                     сроки!
-                  </p>
-                  <p class="cart__both-text">Мы работаем с несколькими транспортными
-                     компаниями, поэтому сможем подобрать
-                     самый быстрый и недорогой вариант доставки.
-                  </p>
-               </div>
-            </div>
-            <div class="cart__bottom-slider cart__bottom-slider-border row pb-2 mb-3">
-               <div class="cart__bottom-slider-left col-lg-6">
-                  <h3 class="cart__bottom-slider-title mb-3">Постеры на бумаге</h3>
-                  <div class="cart__bottom-slider-text">
-                     Печать на холсте в самом высоком разрешении покрывается бесцветным фактурным гелем, благодаря
-                     которому
-                     приобретает
-                     уникальную текстуру и блеск, характерные для масляной живописи. Цвет дополнительно усиливается, а
-                     пигмент приобретает
-                     дополнительную устойчивость к влаге и УФ-излучению. Гель наносится вручную квалифицированными
-                     художниками, которые
-                     плавно воспроизводят на холсте следы кисти или мастихина. Чтобы эффект текстуры художественной
-                     кисти
-                     был максимально
-                     естественным, используем лучший акриловый гель. Вы увидите разницу невооруженным глазом!
-                  </div>
-               </div>
-               <div class="col-lg-6">
-                  <div class="cart__right-slider one owl-carousel">
-                     <div class="cart__right-slider-item">
-                        <img src="./images/cart-bottom-slide.png" alt="" class="img-fluid">
-                     </div>
-                     <div class="cart__right-slider-item">
-                        <img src="./images/cart-bottom-slide.png" alt="" class="img-fluid">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="cart__bottom-slider cart__bottom-slider-border row pb-2 mb-3">
-               <div class="cart__bottom-slider-left col-lg-6">
-                  <h3 class="cart__bottom-slider-title mb-3">паспарту</h3>
-                  <div class="cart__bottom-slider-text">
-                     Печать на холсте в самом высоком разрешении покрывается бесцветным фактурным гелем, благодаря
-                     которому
-                     приобретает
-                     уникальную текстуру и блеск, характерные для масляной живописи. Цвет дополнительно усиливается, а
-                     пигмент приобретает
-                     дополнительную устойчивость к влаге и УФ-излучению. Гель наносится вручную квалифицированными
-                     художниками, которые
-                     плавно воспроизводят на холсте следы кисти или мастихина. Чтобы эффект текстуры художественной
-                     кисти
-                     был максимально
-                     естественным, используем лучший акриловый гель. Вы увидите разницу невооруженным глазом!
-                  </div>
-               </div>
-               <div class="col-lg-6">
-                  <div class="cart__right-slider two owl-carousel">
-                     <div class="cart__right-slider-item">
-                        <img src="./images/cart-bottom-slide.png" alt="" class="img-fluid">
-                     </div>
-                     <div class="cart__right-slider-item">
-                        <img src="./images/cart-bottom-slide.png" alt="" class="img-fluid">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="cart__bottom-slider row">
-               <div class="cart__bottom-slider-left col-lg-6">
-                  <h3 class="cart__bottom-slider-title mb-3">Рама и стекло</h3>
-                  <h4 class="cart__bottom-slider-subtitle mb-2">ПОДРАМНИК СТАНДАРТ (ширина 2 см)</h4>
-                  <div class="cart__bottom-slider-text mb-3">
-                     Чтобы ваша картина всегда выглядела красиво, даже без рамки,
-                     холст натягивается на подрамник с оптимальной толщиной 2 см.
-                     Мы рекомендуем этот подрамник для:
-                     - модульных картин и фотопанно
-                     - малых и средних помещений
-                  </div>
-                  <h4 class="cart__bottom-slider-subtitle mb-2">СТУДИЙНЫЙ ПОДРАМНИК (ширина 3,5 см)</h4>
-                  <div class="cart__bottom-slider-text">
-                     Чтобы картина стала выразительным и украшением интерьера, остановите выбор на массивном подрамнике
-                     толщиной 3,5 см.
-                     Мы рекомендуем этот подрамник для:
-                     - картин большого формата
-                     - просторных помещений
-                  </div>
-               </div>
-               <div class="col-lg-6">
-                  <div class="cart__right-slider three owl-carousel">
-                     <div class="cart__right-slider-item">
-                        <img src="./images/cart-bottom-slide.png" alt="" class="img-fluid">
-                     </div>
-                     <div class="cart__right-slider-item">
-                        <img src="./images/cart-bottom-slide.png" alt="" class="img-fluid">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+				</div>
+			</side>
+			<div class="main__content detail">
+				<h1 class="detail__title">Горы среди гор</h1>
+				<div class="detail__card">
+					<div class="detail__gallery gallery">
+						<div class="gallery__items owl-carousel">
+							<div class="gallery__item"><img src="./images/slider-image-2.png" alt=""></div>
+							<div class="gallery__item"><img src="./images/slider-image.png" alt=""></div>
+							<div class="gallery__item"><img src="./images/slider-image-2.png" alt=""></div>
+							<div class="gallery__item"><img src="./images/slider-image.png" alt=""></div>
+						</div>
+						<div class="gallery__nav">
+							<div class="gallery__dots"></div>
+						</div>
+					</div>
+					<div class="detail__prop properties">
+						<div class="detail__prop-top">
+							<span>Код товара: hp0112</span>
+							<span>Автор: Дровнин Илья</span>
+						</div>
+						<div class="properties__size">
+	<h3 class="properties__title">РАЗМЕР, см</h3>
+	<div class="properties__size-select">
+		<select name="sizes">
+			<option value="40x60" selected>40 x 60</option>
+			<option value="60x80">60 x 80</option>
+			<option value="80x100">80 x 100</option>
+		</select>
+	</div>
+</div>
+<div class="properties__block">
+	<h3 class="properties__title">НАТЯЖКА НА ПОДРАМНИК</h3>
+	<div class="properties__items">
+		<label class="properties__item">
+			<input type="radio" name="stretcher" checked>
+			<img src="./images/baget-stretcher-standart.png" alt=""><span>стандарт</span>
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="stretcher">
+			<img src="./images/baget-stretcher-studio.png" alt=""><span>студийный</span>
+		</label>
+		<a class="properties__item properties__item_help" href="./"></a>
+	</div>
+</div>
+<div class="properties__block">
+	<h3 class="properties__title">Текстурный гель</h3>
+	<div class="properties__items">
+		<label class="properties__item">
+			<input type="radio" name="gel" checked>
+			<img src="./images/baget-empty.png" alt=""><span>нет</span>
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="gel">
+			<img src="./images/baget-gel.png" alt=""><span>да</span>
+		</label>
+		<a class="properties__item properties__item_help" href="./"></a>
+	</div>
+</div>
+<div class="properties__block properties__block_note">
+	<div class="properties__items">
+		<div class="properties__item properties__item_note">
+			<img src="./images/baget-gel.png" alt=""><span>Картина доступна с ручной росписью красками</span>
+		</div>
+		<a href="" class="properties__item properties__item_note properties__item_help"></a>
+	</div>
+</div>
+<div class="properties__block">
+	<h3 class="properties__title">Багет для картины</h3>
+	<div class="properties__items">
+		<label class="properties__item">
+			<input type="radio" name="baget-type" checked>
+			<img src="./images/baget-empty.png" alt=""><span>нет</span>
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget-type">
+			<img src="./images/baget-simple.png" alt=""><span>простой</span>
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget-type">
+			<img src="./images/baget-classic.png" alt=""><span>классика</span>
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget-type">
+			<img src="./images/baget-premium.png" alt=""><span>премиум</span>
+		</label>
+		<a class="properties__item properties__item_help" href="./"></a>
+	</div>
+
+	<div class="properties__items">
+		<label class="properties__item">
+			<input type="radio" name="baget" checked>
+			<img src="./images/baget-default.png" alt="">
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget">
+			<img src="./images/baget-default.png" alt="">
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget">
+			<img src="./images/baget-default.png" alt="">
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget">
+			<img src="./images/baget-default.png" alt="">
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget">
+			<img src="./images/baget-default.png" alt="">
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget">
+			<img src="./images/baget-default.png" alt="">
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget">
+			<img src="./images/baget-default.png" alt="">
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="baget">
+			<img src="./images/baget-default.png" alt="">
+		</label>
+	</div>
+</div>
+<div class="properties__block">
+	<h3 class="properties__title">Паспарту</h3>
+	<div class="properties__items">
+		<label class="properties__item">
+			<input type="radio" name="mat" checked>
+			<img src="./images/baget-empty.png" alt=""><span>нет</span>
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="mat">
+			<img src="./images/baget-paspar1.png" alt=""><span>белый 4 см</span>
+		</label>
+		<label class="properties__item">
+			<input type="radio" name="mat">
+			<img src="./images/baget-paspar2.png" alt=""><span>белый 8 см</span>
+		</label>
+		<a class="properties__item properties__item_help" href="./"></a>
+	</div>
+</div>
+<div class="properties__block">
+	<h3 class="properties__title">Стекло для рамы</h3>
+	<div class="properties__items">
+		<label class="properties__item">
+			<input type="checkbox" name="glass" checked>
+			<img src="./images/baget-glass.png" alt=""><span>да</span>
+		</label>
+		<a class="properties__item properties__item_help" href="./"></a>
+	</div>
+</div>
+<div class="properties__block"></div>
+
+						<div class="detail__price">
+							<span>3500 ₽</span>
+							<span>2600 ₽</span>
+						</div>
+						<div class="detail__buttons">
+							<a class="detail__button detail__button_tocart" href="./">В корзину</a>
+							<a class="detail__button detail__button_defer" href="./">Отложить</a>
+						</div>
+					</div>
+				</div>
+				<div class="detail__info">
+					<div class="detail__info-item detail__info-item_time">
+						<h3 class="detail__info-title"><span>Сроки изготовления</span></h3>
+						<p><span>Холсты и постеры</span> <span>1-2 рабочих дня</span></p>
+						<p><span>Имитация живописи</span> <span>2-3 рабочих дня</span></p>
+						<p><span>Шторы и ширмы</span> <span>3-5 рабочих дня</span></p>
+					</div>
+					<div class="detail__info-item detail__info-item_delivery">
+						<h3 class="detail__info-title"><span>Доставка</span></h3>
+						<p>Доставляем заказы по России и всему миру в самые короткие сроки!</p>
+						<p>Мы работаем с несколькими транспортными компаниями, поэтому сможем подобрать самый быстрый и недорогой вариант доставки.</p>
+					</div>
+				</div>
+				<div class="detail__cases">
+					<div class="detail__case">
+	<div class="detail__case-side">
+		<h2 class="detail__case-title">Премиум печать на холсте</h2>
+		<div class="detail__case-text">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatem quis tempore asperiores quaerat fugiat magni facere laboriosam sit ea sed aliquid aspernatur eos mollitia ullam laudantium earum enim, doloremque, beatae recusandae aut? Perspiciatis ipsam minus earum nulla laborum exercitationem nihil voluptates sequi blanditiis voluptate. Inventore assumenda asperiores voluptatem veritatis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet laudantium sit suscipit consequatur quas pariatur ea vel asperiores dolores est?</p>
+		</div>
+	</div>
+	<div class="detail__slider owl-carousel">
+		<div class="detail__slider-item"><img src="./images/slider-image.png" alt=""></div>
+		<div class="detail__slider-item"><img src="./images/slider-image-2.png" alt=""></div>
+	</div>
+</div>
+
+					<div class="detail__case">
+	<div class="detail__case-side">
+		<h2 class="detail__case-title">Как настоящая картина</h2>
+		<div class="detail__case-text">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatem quis tempore asperiores quaerat fugiat magni facere laboriosam sit ea sed aliquid aspernatur eos mollitia ullam laudantium earum enim, doloremque, beatae recusandae aut? Perspiciatis ipsam minus earum nulla laborum exercitationem nihil voluptates sequi blanditiis voluptate. Inventore assumenda asperiores voluptatem veritatis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet laudantium sit suscipit consequatur quas pariatur ea vel asperiores dolores est?</p>
+		</div>
+	</div>
+	<div class="detail__slider owl-carousel">
+		<div class="detail__slider-item"><img src="./images/slider-image.png" alt=""></div>
+		<div class="detail__slider-item"><img src="./images/slider-image-2.png" alt=""></div>
+	</div>
+</div>
+
+					<div class="detail__case">
+	<div class="detail__case-side">
+		<h2 class="detail__case-title">Подрамники для холста</h2>
+		<div class="detail__case-text">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatem quis tempore asperiores quaerat fugiat magni facere laboriosam sit ea sed aliquid aspernatur eos mollitia ullam laudantium earum enim, doloremque, beatae recusandae aut? Perspiciatis ipsam minus earum nulla laborum exercitationem nihil voluptates sequi blanditiis voluptate. Inventore assumenda asperiores voluptatem veritatis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet laudantium sit suscipit consequatur quas pariatur ea vel asperiores dolores est?</p>
+		</div>
+	</div>
+	<div class="detail__slider owl-carousel">
+		<div class="detail__slider-item"><img src="./images/slider-image.png" alt=""></div>
+		<div class="detail__slider-item"><img src="./images/slider-image-2.png" alt=""></div>
+	</div>
+</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
 
 

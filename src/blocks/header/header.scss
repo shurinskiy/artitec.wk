@@ -398,6 +398,7 @@
 		align-items: center;
 
 		@include media('<=xxs') {
+			background-color: transparent;
 			flex-wrap: wrap;
 		}
 	}

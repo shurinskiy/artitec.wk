@@ -146,10 +146,10 @@ function shapes() {
 function fonts() {
 	return $.del([pth.pbl.fnts + '*']).then(function (paths) {
 		gulp.src(pth.src.fnts)
-			// .pipe($.fonter({
-			// 	formats: ['woff', 'ttf', 'eot'],
-			// 	compound2simple: true
-			// }))
+			/* .pipe($.fonter({
+				formats: ['woff', 'ttf', 'eot'],
+				compound2simple: true
+			})) */
 			.pipe(gulp.dest(pth.pbl.fnts))
 			.pipe($.if(isSync, $.browserSync.stream()));
 		console.log('Deleted files and folders:\n', paths.join('\n'));

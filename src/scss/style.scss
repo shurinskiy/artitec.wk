@@ -27,23 +27,9 @@ $breakpoints: (
 @import '../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
 
-
-@import "../../node_modules/include-media/dist/_include-media.scss";
-
-$breakpoints: (
-  'xxxs': 360px,
-  'xxs': 480px,
-  'xs': 640px,
-  'sm': 780px,
-  'md': 960px,
-  'lg': 1100px,
-  'xlg': 1280px,
-  'xxlg': 1440px,
-  'xxxlg': 1680px,
-  'xxxxlg': 1920px
-);
 @import "../blocks/**/*.scss";
-body { @include screen-media(); }
+
+// body { @include screen-media(); }
 
 body, html {
 	font-size: #{$basesize}px;

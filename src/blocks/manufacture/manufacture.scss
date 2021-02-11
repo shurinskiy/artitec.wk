@@ -38,12 +38,17 @@
 		&::before {
 			content: '';
 			position: absolute;
-			width: 20px;
+			width: 21px;
 			height: 21px;
 			background-color: $blue;
-			top: 50%;
-			transform: translateY(-50%);
+			top: 7px;
 			left: -35px;
+
+			@include media('<=xxs') {
+				width: 18px;
+				height: 18px;
+				top: 5px;
+			}
 		}
 
 		@include media('<=xxs') {

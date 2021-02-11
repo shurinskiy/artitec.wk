@@ -7,7 +7,6 @@
 		dots: false,
 		nav: true,
 		navText: ['',''],
-		navContainer: '.manufacture__slider',
 		navClass: ['manufacture__prev','manufacture__next']
 	});
 	

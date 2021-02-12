@@ -192,7 +192,7 @@
 			<div class="main__content detail">
 				<h1 class="detail__title">Горы среди гор</h1>
 				<div class="detail__card">
-					<div class="detail__gallery gallery">
+					<div class="detail__gallery gallery" data-blue="выгодно!">
 						<div class="gallery__items owl-carousel">
 							<div class="gallery__item"><img src="./images/slider-image-2.png" alt=""></div>
 							<div class="gallery__item"><img src="./images/slider-image.png" alt=""></div>
@@ -453,15 +453,34 @@
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script>
 
-<div class="modal__hidden">
-	<div id="order">
-		<form action="/">
-			<input type="text" name="name">
-			<input type="text" name="phone">
-			<input type="email" name="email">
-			<input type="submit" value="Заказать">
-		</form>
-	</div>
+<div class="modal__hidden" id="order">
+	<form class="modal__form" action="/">
+		<div class="modal__field">
+			<span class="modal__label">Ваш e-mail</span>
+			<input class="modal__input" type="text" name="email" placeholder="E-mail">
+		</div>
+		<div class="modal__field">
+			<span class="modal__label">Ваше имя</span>
+			<input class="modal__input" type="text" name="name" placeholder="Имя">
+		</div>
+		<div class="modal__field">
+			<span class="modal__label">Ваш телефон</span>
+			<input class="modal__input" type="text" name="phone" placeholder="Телефон (в произвольной форме)">
+		</div>
+		<div class="modal__field">
+			<input class="modal__input" type="text" name="city" placeholder="Ваш город">
+		</div>
+		<div class="modal__field">
+			<label class="modal__file"><input type="file" name="file">Загрузить файлы</label>
+		</div>
+		<div class="modal__field">
+			<textarea class="modal__textarea" name="comment" placeholder="Ваш комментарий, если необходим"></textarea>
+		</div>
+		<div class="modal__bottom">
+			<input class="modal__submit" type="submit" value="Заказать">
+			<p class="modal__note">Нажимая кнопку, вы принимаете условия <a href="./">публичной оферты</a> и даете согласие на обработку <a href="./">персональных данных</a></p>
+		</div>
+	</form>
 </div>
 
 

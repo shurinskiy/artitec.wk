@@ -28,7 +28,7 @@
 		cursor: pointer;
 		width: 25px;
 		height: 25px;
-		background: url('#{$images-path}menu-close.svg') center / 25px 25px no-repeat transparent;
+		background: url('#{$images-path}menu-close.svg') center / 20px 20px no-repeat transparent;
 	}
 
 	&__body {
@@ -68,7 +68,7 @@
 
 	&__field {
 		box-sizing: border-box;
-		margin: 0 15px 30px;
+		margin: 0 15px 25px;
 		width: calc(100% - 30px);
 		
 		&_half {
@@ -77,25 +77,40 @@
 	}
 
 	&__label {
-		font-family: "GPB", sans-serif;
-		font-size: 20px;
+		font-size: 16px;
 		display: block;
-		margin-bottom: 12px;
+		margin-bottom: 8px;
 
-		&::before {
+		/* &::before {
 			content: '*';
 			color: #C93131;
-		}
+		} */
 	}
 
 	&__input {
 		box-sizing: border-box;
-		border: 1px solid #0096D7;
+		font-family: "SL", sans-serif;
+		font-size: 15px;
+		line-height: 1.1;
+		border: 1px solid $grey;
 		background: none;
 		outline: none;
 		border-radius: 5px;
-		padding: 15px 20px;
+		padding: 20px;
 		width: 100%;
+
+		&::placeholder {
+			color: #aaa;
+		}
+
+		&:focus::placeholder {
+			color: transparent;
+		}
+	}
+
+	&__textarea {
+		@extend #{$self}__input;
+		resize: none;
 	}
 
 	&__radio {
@@ -103,50 +118,56 @@
 		margin-bottom: 5px;
 	}
 
-	&__total {
-		font-family: "GPB", sans-serif;
-		font-size: 20px;
-		margin: 0 15px 30px;
-		
-		span {
-			font-family: "GPL", sans-serif;
-		}
-	}
-
 	&__bottom {
 		margin: 0 15px;
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
 	}
 
+	&__file {
+		box-sizing: border-box;
+		display: inline-block;
+		line-height: 1.1;
+		background-color: $red;
+		color: #fff;
+		border: none;
+		padding: 10px 15px 12px;
+		cursor: pointer;
+
+		input[type="file"] {
+			display: none;
+		}
+	}
+	
 	&__submit {
-		width: 47%;
+		outline: none;
+		appearance: none;
+		text-transform: uppercase;
+		font-family: "SB", sans-serif;
+		font-size: 16px;
+		line-height: 1.1;
+		background-color: $red;
+		color: #fff;
+		border: none;
+		padding: 17px;
+		cursor: pointer;
 	}
 	
 	&__note {
-		width: 47%;
-		font-size: 11px;
-		line-height: 1.6;
+		font-size: 12px;
+		line-height: 1.5;
 		margin-bottom: 0;
+		text-align: center;
 
 		a {
-			color: #0F3CA0;
+			color: $cyan;
+			text-decoration: none;
 		}
 	}
 
 	&_order {
-		
-		input[name="name"] {
-			border: 1px solid red;
-		}
-		
-		input[name="email"] {
-			border: 1px solid green;
-		}
-		
-		input[name="phone"] {
-			border: 1px solid blue;
+		#{$self}__submit {
+			display: block;
+			width: 100%;
+			margin-bottom: 25px;
 		}
 	}
 

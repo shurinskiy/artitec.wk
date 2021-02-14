@@ -46,10 +46,17 @@
 	&__items {
 		display: flex;
 		flex-flow: row wrap;
-
+		&_modif {
+			flex-direction: column;
+		}
 		&:not(:first-child) {
 			padding-top: 10px;
 		}
+	}
+
+	&__items-wrapper {
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__item {
@@ -59,6 +66,12 @@
 		
 		&:not(:last-of-type) {
 			margin-right: 20px;
+			@include media('<=xxs-new') {
+				margin-right: 15px;
+			}
+			@include media('<=xxxs') {
+				margin-right: 10px;
+			}
 		}
 		
 		input {
@@ -77,6 +90,14 @@
 			margin-bottom: 5px;
 			border: 1px solid #fff;
 			outline: 1px solid $grey;
+			@include media('<=xxs-new') {
+				width: 55px;
+				height: 55px;
+			}
+			@include media('<=xxxs') {
+				width: 50px;
+				height: 50px;
+			}
 		}
 
 		span {
@@ -84,13 +105,24 @@
 			font-family: "SL", sans-serif;
 			font-size: 14px;
 			line-height: 1.1;
-			// margin-bottom: 15px;
+			@include media('<=xxs-new') {
+				font-size: 12px;
+			}
+
 		}
 
 		&_help {
 			width: 65px;
 			height: 65px;
 			position: relative;
+			@include media('<=xxs-new') {
+				width: 55px;
+				height: 55px;
+			}
+			@include media('<=xxxs') {
+				width: 50px;
+				height: 50px;
+			}
 			
 			&::before {
 				display: block;
@@ -133,6 +165,7 @@
 				text-transform: uppercase;
 				max-width: 240px;
 			}
+			
 		}
 	}
 }

@@ -1,0 +1,28 @@
+@@include("_head.html", {"bodyclass":"home"})
+@@include("_header.html")
+@@include("_breadcrumbs.html", {"current": "Наше производство"})
+
+<section class="calculator">
+	<div class="wrapper">
+		<div class="calculator__inner">
+			<div class="calculator__side">
+				<h1 class="calculator__title">Наше производство</h1>
+				<div class="calculator__material-select">
+					<select name="materials">
+						<option value="" data-deps="rigidbase" selected>Фотовинил</option>
+						<option value="" data-deps="bagets">Фотобумага</option>
+						<option value="" data-deps="stretcher">Холст</option>
+					</select>
+				</div>
+				<div class="calculator__workspace properties">
+					
+				</div>
+			</div>
+			<div class="calculator__upload">
+
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

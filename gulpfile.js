@@ -53,7 +53,7 @@ let pth = {
 	},
 	wtch: {
 		html: './src/**/*.html',
-		js: ['./src/js/**/*.js', './src/blocks/**/*.js'],
+		js: ['./src/js/**/*.js', './src/blocks/**/(*.js|*.json)'],
 		css: ['./src/scss/**/*.scss', './src/blocks/**/*.scss'],
 		img: './src/images/**/!(icon-*.svg|shape-*.svg)',
 		shp: './src/images/**/shape-*.svg',

@@ -1,0 +1,290 @@
+{
+	"rigidbase": {
+		"title": "Накатка на жесткую основу",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "rigidbase_0",
+			"checked": "checked",
+			"img": "baget-empty.png"
+		},
+		"1": {
+			"label": "пластик 3мм",
+			"type": "radio",
+			"value": "rigidbase_1",
+			"checked": "",
+			"img": "baget-rigidbase-plastic.png"
+		},
+		"2": {
+			"label": "пенокартон 5мм",
+			"type": "radio",
+			"value": "rigidbase_2",
+			"checked": "",
+			"img": "baget-rigidbase-foamboard.png"
+		}
+	},
+	"stretcher": {
+		"title": "Натяжка на подрамник",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "stretcher_0",
+			"checked": "checked",
+			"img": "baget-empty.png"
+		},
+		"1": {
+			"label": "стандарт",
+			"type": "radio",
+			"value": "stretcher_1",
+			"checked": "",
+			"img": "baget-stretcher-standart.png",
+			"deps": [ "painting" ]
+		},
+		"2": {
+			"label": "студийный",
+			"type": "radio",
+			"value": "stretcher_2",
+			"checked": "",
+			"img": "baget-stretcher-studio.png",
+			"deps": [ "painting", "bagets_canvas" ]
+		}
+	},
+	"painting": {
+		"title": "Имитация живописи",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "painting_0",
+			"checked": "checked",
+			"img": "baget-empty.png"
+		},
+		"1": {
+			"label": "да",
+			"type": "radio",
+			"value": "painting_1",
+			"checked": "",
+			"img": "baget-gel.png"
+		}
+	},
+	"bagets": {
+		"title": "Багет для картины",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "bagets_0",
+			"checked": "checked",
+			"img": "baget-empty.png"
+		},
+		"1": {
+			"label": "простой",
+			"type": "radio",
+			"value": "bagets_1",
+			"checked": "",
+			"img": "baget-simple.png",
+			"deps": [ "baget_simple", "glass", "mat" ]
+		},
+		"2": {
+			"label": "классика",
+			"type": "radio",
+			"value": "bagets_2",
+			"checked": "",
+			"img": "baget-classic.png",
+			"deps": [ "baget_classic", "glass", "mat" ]
+		},
+		"3": {
+			"label": "премиум",
+			"type": "radio",
+			"value": "bagets_3",
+			"checked": "",
+			"img": "baget-premium.png",
+			"deps": [ "baget_premium", "glass", "mat" ]
+		}
+	},
+	"bagets_canvas": {
+		"title": "Багет для картины",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "bagets_0",
+			"checked": "checked",
+			"img": "baget-empty.png"
+		},
+		"1": {
+			"label": "простой",
+			"type": "radio",
+			"value": "bagets_1",
+			"checked": "",
+			"img": "baget-simple.png",
+			"deps": [ "baget_simple"]
+		},
+		"2": {
+			"label": "классика",
+			"type": "radio",
+			"value": "bagets_2",
+			"checked": "",
+			"img": "baget-classic.png",
+			"deps": [ "baget_classic"]
+		},
+		"3": {
+			"label": "премиум",
+			"type": "radio",
+			"value": "bagets_3",
+			"checked": "",
+			"img": "baget-premium.png",
+			"deps": [ "baget_premium"]
+		}
+	},
+	"baget_simple": {
+		"0": {
+			"type": "radio",
+			"value": "baget_simple_0",
+			"checked": "checked",
+			"img": "baget-default.png"
+		},
+		"1": {
+			"type": "radio",
+			"value": "baget_simple_1",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"2": {
+			"type": "radio",
+			"value": "baget_simple_2",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"3": {
+			"type": "radio",
+			"value": "baget_simple_3",
+			"checked": "",
+			"img": "baget-default.png"
+		}
+	},
+	"baget_classic": {
+		"0": {
+			"type": "radio",
+			"value": "baget_classic_0",
+			"checked": "checked",
+			"img": "baget-default.png"
+		},
+		"1": {
+			"type": "radio",
+			"value": "baget_classic_1",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"2": {
+			"type": "radio",
+			"value": "baget_classic_2",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"3": {
+			"type": "radio",
+			"value": "baget_classic_3",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"4": {
+			"type": "radio",
+			"value": "baget_classic_4",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"5": {
+			"type": "radio",
+			"value": "baget_classic_5",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"6": {
+			"type": "radio",
+			"value": "baget_classic_6",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"7": {
+			"type": "radio",
+			"value": "baget_classic_7",
+			"checked": "",
+			"img": "baget-default.png"
+		}
+	},
+	"baget_premium": {
+		"0": {
+			"type": "radio",
+			"value": "baget_premium_0",
+			"checked": "checked",
+			"img": "baget-default.png"
+		},
+		"1": {
+			"type": "radio",
+			"value": "baget_premium_1",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"2": {
+			"type": "radio",
+			"value": "baget_premium_2",
+			"checked": "",
+			"img": "baget-default.png"
+		},
+		"3": {
+			"type": "radio",
+			"value": "baget_premium_3",
+			"checked": "",
+			"img": "baget-default.png"
+		}
+	},
+	"gel": {
+		"title": "Текстурный гель",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "gel_0",
+			"checked": "checked",
+			"img": "baget-empty.png"
+		},
+		"1": {
+			"label": "стандарт",
+			"type": "radio",
+			"value": "gel_1",
+			"checked": "",
+			"img": "baget-gel.png"
+		}
+	},
+	"mat": {
+		"title": "Паспарту",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "mat_0",
+			"checked": "checked",
+			"img": "baget-empty.png"
+		},
+		"1": {
+			"label": "белый 4мм",
+			"type": "radio",
+			"value": "mat_1",
+			"checked": "",
+			"img": "baget-mat-4mm.png"
+		},
+		"2": {
+			"label": "белый 8мм",
+			"type": "radio",
+			"value": "mat_1",
+			"checked": "",
+			"img": "baget-mat-8mm.png"
+		}
+	},
+	"glass": {
+		"title": "Стекло для рамы",
+		"0": {
+			"label": "нет",
+			"type": "checkbox",
+			"value": "glass",
+			"checked": "checked",
+			"img": "baget-glass.png"
+		}
+	}
+}

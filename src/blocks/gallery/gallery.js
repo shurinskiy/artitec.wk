@@ -11,7 +11,7 @@
 		dotsContainer:	'.gallery__dots',
 		navClass: ['gallery__btn gallery__btn_prev', 'gallery__btn gallery__btn_next'],
 		dotClass: 'gallery__dot',
-        onInitialized: makeThumb
+		onInitialized: makeThumb
 	 });
 
 	 function makeThumb(e) {

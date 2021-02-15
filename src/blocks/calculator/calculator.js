@@ -1,11 +1,15 @@
 import options from './calculator.json'
 
 (() => {
+	let $select = $('.calculator__material-select');
 	let $space = $('.calculator__workspace');
 
+	// Главная функция отрисовки блоков с инпутами
 	let render = function(deps, current) {
+		if(!$select.length) return;
+
 		let html = '';
-		deps = deps || $('.calculator__material-select').find(':selected').data('deps').split(',');
+		deps = deps || $select.find(':selected').data('deps').split(',');
 		// console.log(deps);
 
 		deps.forEach(function(dep, index) {
@@ -37,12 +41,12 @@ import options from './calculator.json'
 		}
 	}
 	
-
-	$('.calculator__material-select').on('change', 'select', function(e) {
+	// Обработчик на селект
+	$select.on('change', 'select', function(e) {
 		render();
 	});
 
-
+	// Обработчик на все чекбоксы и радиокнопки
 	$space.on('change', 'input[type="checkbox"], input[type="radio"]', function(e) {
 		let $self = $(this); 
 		let deps = $self.data('deps');
@@ -51,5 +55,6 @@ import options from './calculator.json'
 			render(deps.split(','), $self.parents('.properties__block'));
 	});
 
+	// Вызывается в первую очередь
 	render();
 })();

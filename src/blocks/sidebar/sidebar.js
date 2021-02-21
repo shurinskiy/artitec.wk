@@ -8,4 +8,11 @@
 		$menu.removeClass('opened');
 	})
 
+	$(window).on('click', function(e) {
+		if($sidebar.hasClass('opened') && !e.target.closest('.sidebar')) {
+			e.preventDefault();
+			$sidebar.toggleClass('opened');
+		}
+	});
+
 })();

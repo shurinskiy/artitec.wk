@@ -8,17 +8,13 @@
 		e.stopPropagation();
 		$menu.toggleClass('opened');
 		$sidebar.removeClass('opened');
-	})
+	});
 
 	$(window).on('click', function(e) {
-		let target = e.target.classList;
-
-		if($menu.hasClass('opened') && 
-			!target.contains('header__tel') && 
-			!target.contains('header__social-item') && 
-			!target.contains('header__navi-item')) {
-				$menu.toggleClass('opened');
-			}
+		if($menu.hasClass('opened') && !e.target.closest('.header__side-top')) {
+			e.preventDefault();
+			$menu.toggleClass('opened');
+		}
 	});
 
 })();

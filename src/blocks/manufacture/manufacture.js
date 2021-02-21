@@ -1,3 +1,5 @@
+import 'owl.carousel';
+
 (() => {
 
 	$('.manufacture__slider').owlCarousel({

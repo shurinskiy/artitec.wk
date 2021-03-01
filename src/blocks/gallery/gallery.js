@@ -1,3 +1,5 @@
+import 'owl.carousel';
+
 (() => {
 
 	$('.gallery__items').owlCarousel({

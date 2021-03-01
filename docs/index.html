@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body class="">
+<body class="home">
 
 <header class="header">
 	<div class="wrapper">
@@ -78,210 +78,76 @@
 	</div>
 </section>
 
-<div class="breadcrumbs">
+
+
+<section class="advice">
 	<div class="wrapper">
-		<div class="breadcrumbs__inner">
-			<div class="breadcrumbs__links ">
-				<a href="./" class="breadcrumbs__link">Главная</a>
-				<span>&gt;</span>
-				<span class="breadcrumbs__link breadcrumbs__link_current">Каталог</span>
+		<h2 class="advice__title">Рекомендуем</h2>
+		<div class="advice__set">
+			<div class="advice__set-row">
+				<div class="card advice__set-card">
+	<div class="card__inner" data-red="новинка!"  >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
+		<p class="card__category">Категория: Холсты</p>
+		<h2 class="card__title">Доллары россыпью на столе</h2>
+		<p class="card__author">Автор: Илья Дровнин</p>
+		<p class="card__price">
+			от  <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer ">Отложено</a>
+		</div>
+	</div>
+</div><div class="card advice__set-card">
+	<div class="card__inner" data-red="новинка!"  >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
+		<p class="card__category">Категория: Холсты</p>
+		<h2 class="card__title">Лавандовые поля</h2>
+		<p class="card__author">Автор: Клод Монэ</p>
+		<p class="card__price">
+			от  <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer active">Отложено</a>
+		</div>
+	</div>
+</div><div class="card advice__set-card">
+	<div class="card__inner" data-red="новинка!"  >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
+		<p class="card__category">Категория: Постеры</p>
+		<h2 class="card__title">Карнавал</h2>
+		<p class="card__author">Автор: Хуан Пердидез</p>
+		<p class="card__price">
+			от  <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer ">Отложено</a>
+		</div>
+	</div>
+</div><div class="card advice__set-card">
+	<div class="card__inner" data-red="новинка!"  >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
+		<p class="card__category">Категория: Холсты</p>
+		<h2 class="card__title">Нос и губы в рамке под натуральное дерево</h2>
+		<p class="card__author">Автор: Неизвестный</p>
+		<p class="card__price">
+			от  <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer ">Отложено</a>
+		</div>
+	</div>
+</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<main class="main">
-	<div class="wrapper">
-		<div class="main__inner">
-			<side class="main__side sidebar">
-				<div class="sidebar__inner">
-					<span class="sidebar__toggle"></span>
-					<div class="sidebar-item categories">
-	<div class="categories__item">
-		<h3>Холсты</h3>
-		<div class="categories__subitems">
-			<a class="categories__subitem" href="./">Абстракции</a>
-			<a class="categories__subitem" href="./">Города</a>
-			<a class="categories__subitem" href="./">Животные</a>
-			<a class="categories__subitem" href="./">Пейзаж</a>
-			<a class="categories__subitem" href="./">Ретро</a>
-			<a class="categories__subitem" href="./">Фильмы</a>
-		</div>
-	</div>
-	<div class="categories__item">
-		<h3>Постеры</h3>
-		<div class="categories__subitems">
-			<a class="categories__subitem" href="./">Города</a>
-			<a class="categories__subitem" href="./">Пейзаж</a>
-			<a class="categories__subitem" href="./">Ретро</a>
-			<a class="categories__subitem" href="./">Фильмы</a>
-		</div>
-	</div>
-	<div class="categories__item">
-		<h3>Модульные</h3>
-		<div class="categories__subitems">
-			<a class="categories__subitem" href="./">Города</a>
-			<a class="categories__subitem" href="./">Пейзаж</a>
-			<a class="categories__subitem" href="./">Ретро</a>
-			<a class="categories__subitem" href="./">Фильмы</a>
-		</div>
-	</div>
-</div>
-<div class="sidebar-item filter">
-	<h3 class="filter__title">Ориентация</h3>
-	<div class="filter__items">
-		<label class="filter__item"><input type="radio" name="orient" checked><span>все</span></label>
-		<label class="filter__item"><input type="radio" name="orient"><span>горизонтальные</span></label>
-		<label class="filter__item"><input type="radio" name="orient"><span>вертикальные</span></label>
-		<label class="filter__item"><input type="radio" name="orient"><span>квадратные</span></label>
-	</div>
-</div>
-<div class="sidebar-item filter">
-	<h3 class="filter__title">Тип изображения</h3>
-	<div class="filter__items">
-		<label class="filter__item"><input type="radio" name="type" checked><span>все</span></label>
-		<label class="filter__item"><input type="radio" name="type"><span>фотографии</span></label>
-		<label class="filter__item"><input type="radio" name="type"><span>графика</span></label>
-		<label class="filter__item"><input type="radio" name="type"><span>репродукции</span></label>
-	</div>
-</div>
-<div class="sidebar-item filter">
-	<h3 class="filter__title">Локация</h3>
-	<div class="filter__items">
-		<label class="filter__item"><input type="radio" name="location" checked><span>все</span></label>
-		<label class="filter__item"><input type="radio" name="location"><span>для кухни</span></label>
-		<label class="filter__item"><input type="radio" name="location"><span>для гостиной</span></label>
-		<label class="filter__item"><input type="radio" name="location"><span>для детской</span></label>
-		<label class="filter__item"><input type="radio" name="location"><span>для офиса</span></label>
-		<label class="filter__item"><input type="radio" name="location"><span>для ресторана</span></label>
-	</div>
-</div>
-<div class="sidebar-item filter">
-	<h3 class="filter__title">Основной цвет</h3>
-	<div class="filter__items">
-		<label class="filter__item">
-			<input type="radio" name="color"checked>
-			<span>все</span>
-		</label>
-		<label class="filter__item">
-			<input type="radio" name="color"><span></span>
-			<span class="filter__color filter__color_bw">черно-белый</span>
-		</label>
-		<label class="filter__item">
-			<input type="radio" name="color"><span></span>
-			<span class="filter__color filter__color_red">красный</span>
-		</label>
-		<label class="filter__item">
-			<input type="radio" name="color"><span></span>
-			<span class="filter__color filter__color_green">зеленый</span>
-		</label>
-		<label class="filter__item">
-			<input type="radio" name="color"><span></span>
-			<span class="filter__color filter__color_blue">синий</span>
-		</label>
-		<label class="filter__item">
-			<input type="radio" name="color"><span></span>
-			<span class="filter__color filter__color_yellow">желтый</span>
-		</label>
-	</div>
-</div>
-
-
-
-				</div>
-			</side>
-			<div class="main__content catalog">
-				<div class="catalog__top">
-					<div class="catalog__title">Каталог</div>
-					<div class="catalog__sort">
-						<div class="catalog__sort-item">
-							<span>показывать</span>
-							<select name="">
-								<option value="15">по 15</option>
-								<option value="25">по 25</option>
-								<option value="35">по 35</option>
-								<option value="45">по 45</option>
-							</select>
-						</div>
-						<div class="catalog__sort-item">
-							<span>сортировать</span>
-							<select name="">
-								<option value="1">сначала новинки</option>
-								<option value="2">сначала старые</option>
-							</select>
-						</div>
-					</div>
-					<div class="pagination catalog__top-pagination">
-	<a href="./" class="pagination__prev"></a>
-	<a href="./" class="pagination__item active">1</a>
-	<span class="pagination__pass">...</span>
-	<a href="./" class="pagination__item">4</a>
-	<a href="./" class="pagination__item pagination__item_current">5</a>
-	<a href="./" class="pagination__item">6</a>
-	<span class="pagination__pass">...</span>
-	<a href="./" class="pagination__item">31</a>
-	<a href="./" class="pagination__next"></a>
-</div>
-
-				</div>
-				<div class="catalog__items">
-					<div class="card catalog__item">
-	<div class="card__inner" data-red="новинка!"  >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
-		<p class="card__category">Категория: Холсты</p>
-		<h2 class="card__title">Доллары россыпью на столе</h2>
-		<p class="card__author">Автор: Илья Дровнин</p>
-		<p class="card__price">
-			от  <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer ">Отложено</a>
-		</div>
-	</div>
-</div><div class="card catalog__item">
-	<div class="card__inner" data-red="новинка!"  >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
-		<p class="card__category">Категория: Холсты</p>
-		<h2 class="card__title">Лавандовые поля</h2>
-		<p class="card__author">Автор: Клод Монэ</p>
-		<p class="card__price">
-			от  <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer active">Отложено</a>
-		</div>
-	</div>
-</div><div class="card catalog__item">
-	<div class="card__inner" data-red="новинка!"  >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
-		<p class="card__category">Категория: Холсты</p>
-		<h2 class="card__title">Нос и губы в рамке под натуральное дерево</h2>
-		<p class="card__author">Автор: Неизвестный</p>
-		<p class="card__price">
-			от  <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer ">Отложено</a>
-		</div>
-	</div>
-</div><div class="card catalog__item">
-	<div class="card__inner" data-red="новинка!"  >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
-		<p class="card__category">Категория: Постеры</p>
-		<h2 class="card__title">Карнавал</h2>
-		<p class="card__author">Автор: Хуан Пердидез</p>
-		<p class="card__price">
-			от  <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer ">Отложено</a>
-		</div>
-	</div>
-</div><div class="card catalog__item">
+		<a class="advice__button" href="./">Смотреть все новинки</a>
+		<div class="advice__set">
+			<div class="advice__set-row">
+				<div class="card advice__set-card">
 	<div class="card__inner"  data-blue="выгодно!" >
 		<a href="./holst.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -295,7 +161,7 @@
 			<a href="./" class="card__button card__button_defer ">Отложено</a>
 		</div>
 	</div>
-</div><div class="card catalog__item">
+</div><div class="card advice__set-card">
 	<div class="card__inner"  data-blue="выгодно!" >
 		<a href="./holst.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -309,7 +175,7 @@
 			<a href="./" class="card__button card__button_defer ">Отложено</a>
 		</div>
 	</div>
-</div><div class="card catalog__item">
+</div><div class="card advice__set-card">
 	<div class="card__inner"  data-blue="выгодно!" >
 		<a href="./holst.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
 		<p class="card__category">Категория: Постеры</p>
@@ -323,7 +189,7 @@
 			<a href="./" class="card__button card__button_defer active">Отложено</a>
 		</div>
 	</div>
-</div><div class="card catalog__item">
+</div><div class="card advice__set-card">
 	<div class="card__inner"  data-blue="выгодно!" >
 		<a href="./holst.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
 		<p class="card__category">Категория: Холсты</p>
@@ -337,84 +203,111 @@
 			<a href="./" class="card__button card__button_defer ">Отложено</a>
 		</div>
 	</div>
-</div><div class="card catalog__item">
-	<div class="card__inner"  data-blue="выгодно!" >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
-		<p class="card__category">Категория: Холсты</p>
-		<h2 class="card__title">Доллары россыпью на столе</h2>
-		<p class="card__author">Автор: Илья Дровнин</p>
-		<p class="card__price">
-			от <span>2 400 р.</span> <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer ">Отложено</a>
-		</div>
-	</div>
-</div><div class="card catalog__item">
-	<div class="card__inner"  data-blue="выгодно!" >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
-		<p class="card__category">Категория: Холсты</p>
-		<h2 class="card__title">Лавандовые поля</h2>
-		<p class="card__author">Автор: Клод Монэ</p>
-		<p class="card__price">
-			от <span>2 400 р.</span> <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer ">Отложено</a>
-		</div>
-	</div>
-</div><div class="card catalog__item">
-	<div class="card__inner"  data-blue="выгодно!" >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
-		<p class="card__category">Категория: Постеры</p>
-		<h2 class="card__title">Карнавал</h2>
-		<p class="card__author">Автор: Хуан Пердидез</p>
-		<p class="card__price">
-			от <span>2 400 р.</span> <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer active">Отложено</a>
-		</div>
-	</div>
-</div><div class="card catalog__item">
-	<div class="card__inner"  data-blue="выгодно!" >
-		<a href="./holst.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
-		<p class="card__category">Категория: Холсты</p>
-		<h2 class="card__title">Нос и губы в рамке под натуральное дерево</h2>
-		<p class="card__author">Автор: Неизвестный</p>
-		<p class="card__price">
-			от <span>2 400 р.</span> <strong>1 190 p.</strong>
-		</p>
-		<div class="card__buttons">
-			<a href="./" class="card__button card__button_more">Подробнее</a>
-			<a href="./" class="card__button card__button_defer ">Отложено</a>
-		</div>
-	</div>
 </div>
-
-				</div>
-				<div class="catalog__bottom">
-					<span class="catalog__showed">Показано с 1 по 15 из 460 (всего 31 страниц)</span>
-					<div class="pagination catalog__bottom-pagination">
-	<a href="./" class="pagination__prev"></a>
-	<a href="./" class="pagination__item active">1</a>
-	<span class="pagination__pass">...</span>
-	<a href="./" class="pagination__item">4</a>
-	<a href="./" class="pagination__item pagination__item_current">5</a>
-	<a href="./" class="pagination__item">6</a>
-	<span class="pagination__pass">...</span>
-	<a href="./" class="pagination__item">31</a>
-	<a href="./" class="pagination__next"></a>
-</div>
-
-				</div>
 			</div>
 		</div>
+		<a class="advice__button" href="./">Смотреть все хиты</a>
+		<div class="advice__set">
+			<div class="advice__set-row">
+				<div class="card advice__set-card">
+	<div class="card__inner"  data-blue="выгодно!" >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-4.png" alt=""></a>
+		<p class="card__category">Категория: Холсты</p>
+		<h2 class="card__title">Доллары россыпью на столе</h2>
+		<p class="card__author">Автор: Илья Дровнин</p>
+		<p class="card__price">
+			от <span>2 400 р.</span> <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer ">Отложено</a>
+		</div>
 	</div>
-</main>
+</div><div class="card advice__set-card">
+	<div class="card__inner"  data-blue="выгодно!" >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-3.png" alt=""></a>
+		<p class="card__category">Категория: Холсты</p>
+		<h2 class="card__title">Лавандовые поля</h2>
+		<p class="card__author">Автор: Клод Монэ</p>
+		<p class="card__price">
+			от <span>2 400 р.</span> <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer ">Отложено</a>
+		</div>
+	</div>
+</div><div class="card advice__set-card">
+	<div class="card__inner"  data-blue="выгодно!" >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-1.png" alt=""></a>
+		<p class="card__category">Категория: Постеры</p>
+		<h2 class="card__title">Карнавал</h2>
+		<p class="card__author">Автор: Хуан Пердидез</p>
+		<p class="card__price">
+			от <span>2 400 р.</span> <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer active">Отложено</a>
+		</div>
+	</div>
+</div><div class="card advice__set-card">
+	<div class="card__inner"  data-blue="выгодно!" >
+		<a href="./holst.html" class="card__image"><img src="./images/card-image-2.png" alt=""></a>
+		<p class="card__category">Категория: Холсты</p>
+		<h2 class="card__title">Нос и губы в рамке под натуральное дерево</h2>
+		<p class="card__author">Автор: Неизвестный</p>
+		<p class="card__price">
+			от <span>2 400 р.</span> <strong>1 190 p.</strong>
+		</p>
+		<div class="card__buttons">
+			<a href="./" class="card__button card__button_more">Подробнее</a>
+			<a href="./" class="card__button card__button_defer ">Отложено</a>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+		<a class="advice__button" href="./">Смотреть все скидки</a>
+	</div>
+</section>
+
+<section class="choice">
+	<div class="wrapper">
+		<h2 class="choice__title">Выбираем картину</h2>
+		<div class="choice__items owl-carousel">
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для кухни</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для гостинной</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для детской</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для офиса</h3>
+			</a>
+			<a href="./" class="choice__item">
+				<img src="./images/choise-painting.png" alt="" class="choice__image">
+				<h3 class="choice__name">Для ресторана</h3>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="banner">
+	<div class="wrapper">
+		<div class="banner__inner">
+
+		</div>
+	</div>
+</section>
+
 
 <section class="manufacture">
 	<div class="wrapper">
@@ -515,4 +408,4 @@
 
 </body>
 
-</html>
+</html> 

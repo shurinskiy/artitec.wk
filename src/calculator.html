@@ -5,24 +5,87 @@
 <section class="calculator">
 	<div class="wrapper">
 		<div class="calculator__inner">
-			<div class="calculator__side">
-				<h1 class="calculator__title">Наше производство</h1>
-				<div class="calculator__material-select">
-					<select name="materials">
-						<option value="" data-deps="rigidbase" selected>Фотовинил</option>
-						<option value="" data-deps="bagets">Фотобумага</option>
-						<option value="" data-deps="stretcher">Холст</option>
-					</select>
+			<div class="calculator__wrapper">
+				<div class="calculator__side col-lg-6 col-md-12 col-xs-12">
+					<h3 class="calculator__title">ОНЛАЙН-КАЛЬКУЛЯТОР</h3>
+					<div class="calculator__size mb-4">
+						<div class="calculator__size-width">
+							<label class="mb-1">Размер, см</label>
+							<input type="text" value="40">
+						</div>
+						<span class="calculator__size-between">
+							<img src="./images/miltiplication.png" alt="">
+						</span>
+						<div class="calculator__size-height">
+							<input type="text" value="60">
+						</div>
+						<div class="calculator__size-proportional">
+							<input class="calculator__size-proportional-hidden" id="proportional" type="checkbox" checked>
+							<label for="proportional">
+								<span class="calculator__size-proportional-visible"></span>
+								<span class="calculator__size-proportional-text">ПРОПОРЦИОНАЛЬНЫЙ</span>
+							</label>
+						</div>
+						<div class="calculator__size-help">
+							<img src="./images/baget-answer.png" alt="">
+						</div>
+					</div>
+					<div class="calculator__material-select">
+						<div class="calculator__material-select-wrapper">
+							<select name="materials">
+								<option value="2" data-deps="rigidbase" selected>Фотовинил</option>
+								<option value="3" data-deps="bagets">Фотобумага</option>
+								<option value="2.3" data-deps="stretcher">Холст (100% ХЛОПОК)</option>
+							</select>
+						</div>
+					</div>
+					<div class="calculator__workspace properties">
+
+					</div>
+					<div class="calculator__bottom">
+						<div class="calculator__left">
+							<div class="calculator__left-price-old">
+								<span>3500 ₽</span>
+							</div>
+							<div class="calculator__left-price-new font-weight-bold">
+								<span>2600 ₽</span>
+							</div>
+						</div>
+						<div class="calculator__right">
+							<a href="" class="manufacture__button" data-modal="order">Заказать</a>
+						</div>
+					</div>
 				</div>
-				<div class="calculator__workspace properties">
-					
+				<div class="calculator__upload col-lg-6 col-md-12 col-xs-12">
+					<label class="calculator__input-block" for="calculator-img">
+						<input class="calculator__input-img" type="file" name="iamge" hidden accept="image/*"
+							id="calculator-img">
+						<span class="calculator__input-block-img"><img src="./images/download.png" alt=""></span>
+						<span class="calculator__input-block-text">Загрузить изображение</span>
+					</label>
 				</div>
 			</div>
-			<div class="calculator__upload">
-
+			<div class="calculator__description">
+				<p>Декор стен важен для любого интерьера. Если вы хотите купить картины для дома, офиса, ресторана, отеля,
+					салона красоты
+					или напечатать фотографии для дома или для выставки – вам в студию Артитэк!
+					Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем
+					репродукции картин и
+					помогаем оформлять интерьеры.</p>
+				<p>Среди наших клиентов: отель «Санкт-Петербург», рестораны «Bona Capona» и «Manana», музей современного
+					искусства Эрарта,
+					сеть пироговых «Линдфорс», отель «Best Western», автосалоны «Infiniti», профессиональные фотографы и
+					цифровые
+					Декор стен важен для любого интерьера. Если вы хотите купить картины для дома, офиса, ресторана, отеля,
+					салона красоты
+					или напечатать фотографии для дома или для выставки – вам в студию Артитэк!</p>
+				<p>Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем
+					репродукции картин и
+					помогаем оформлять интерьеры.</p>
 			</div>
 		</div>
 	</div>
 </section>
+
 
 @@include("_bottom.html")

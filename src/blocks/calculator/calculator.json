@@ -4,21 +4,21 @@
 		"0": {
 			"label": "нет",
 			"type": "radio",
-			"value": "rigidbase_0",
+			"value": "",
 			"checked": "checked",
 			"img": "baget-empty.png"
 		},
 		"1": {
 			"label": "пластик 3мм",
 			"type": "radio",
-			"value": "rigidbase_1",
+			"value": 100,
 			"checked": "",
 			"img": "baget-rigidbase-plastic.png"
 		},
 		"2": {
 			"label": "пенокартон 5мм",
 			"type": "radio",
-			"value": "rigidbase_2",
+			"value": 400,
 			"checked": "",
 			"img": "baget-rigidbase-foamboard.png"
 		}
@@ -28,25 +28,33 @@
 		"0": {
 			"label": "нет",
 			"type": "radio",
-			"value": "stretcher_0",
+			"value": "",
 			"checked": "checked",
-			"img": "baget-empty.png"
+			"img": "baget-empty.png",
+			"deps": [
+				"empty"
+			]
 		},
 		"1": {
 			"label": "стандарт",
 			"type": "radio",
-			"value": "stretcher_1",
+			"value": "",
 			"checked": "",
 			"img": "baget-stretcher-standart.png",
-			"deps": [ "painting" ]
+			"deps": [
+				"painting",
+				"bagets"
+			]
 		},
 		"2": {
 			"label": "студийный",
 			"type": "radio",
-			"value": "stretcher_2",
+			"value": 400,
 			"checked": "",
 			"img": "baget-stretcher-studio.png",
-			"deps": [ "painting", "bagets_canvas" ]
+			"deps": [
+				"painting"
+			]
 		}
 	},
 	"painting": {
@@ -54,14 +62,14 @@
 		"0": {
 			"label": "нет",
 			"type": "radio",
-			"value": "painting_0",
+			"value": "",
 			"checked": "checked",
 			"img": "baget-empty.png"
 		},
 		"1": {
 			"label": "да",
 			"type": "radio",
-			"value": "painting_1",
+			"value": 400,
 			"checked": "",
 			"img": "baget-gel.png"
 		}
@@ -71,91 +79,76 @@
 		"0": {
 			"label": "нет",
 			"type": "radio",
-			"value": "bagets_0",
+			"value": "",
 			"checked": "checked",
-			"img": "baget-empty.png"
+			"img": "baget-empty.png",
+			"deps": [
+				"empty"
+			]
 		},
 		"1": {
 			"label": "простой",
 			"type": "radio",
-			"value": "bagets_1",
+			"value": "",
 			"checked": "",
 			"img": "baget-simple.png",
-			"deps": [ "baget_simple", "glass", "mat" ]
+			"deps": [
+				"baget_simple",
+				"glass",
+				"mat"
+			]
 		},
 		"2": {
 			"label": "классика",
 			"type": "radio",
-			"value": "bagets_2",
+			"value": "",
 			"checked": "",
 			"img": "baget-classic.png",
-			"deps": [ "baget_classic", "glass", "mat" ]
+			"deps": [
+				"baget_classic",
+				"glass",
+				"mat"
+			]
 		},
 		"3": {
 			"label": "премиум",
 			"type": "radio",
-			"value": "bagets_3",
+			"value": "",
 			"checked": "",
 			"img": "baget-premium.png",
-			"deps": [ "baget_premium", "glass", "mat" ]
+			"deps": [
+				"baget_premium",
+				"glass",
+				"mat"
+			]
 		}
 	},
 	"bagets_canvas": {
-		"title": "Багет для картины",
-		"0": {
-			"label": "нет",
-			"type": "radio",
-			"value": "bagets_0",
-			"checked": "checked",
-			"img": "baget-empty.png"
-		},
-		"1": {
-			"label": "простой",
-			"type": "radio",
-			"value": "bagets_1",
-			"checked": "",
-			"img": "baget-simple.png",
-			"deps": [ "baget_simple"]
-		},
-		"2": {
-			"label": "классика",
-			"type": "radio",
-			"value": "bagets_2",
-			"checked": "",
-			"img": "baget-classic.png",
-			"deps": [ "baget_classic"]
-		},
-		"3": {
-			"label": "премиум",
-			"type": "radio",
-			"value": "bagets_3",
-			"checked": "",
-			"img": "baget-premium.png",
-			"deps": [ "baget_premium"]
-		}
+		"title": "Багет для картины"
 	},
+	"empty": {},
 	"baget_simple": {
 		"0": {
 			"type": "radio",
-			"value": "baget_simple_0",
+			"value": 100,
 			"checked": "checked",
 			"img": "baget-default.png"
 		},
 		"1": {
 			"type": "radio",
-			"value": "baget_simple_1",
+			"value": 100,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"2": {
 			"type": "radio",
-			"value": "baget_simple_2",
+			"value": 100,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"3": {
 			"type": "radio",
-			"value": "baget_simple_3",
+			"value": 200,
 			"checked": "",
 			"img": "baget-default.png"
 		}
@@ -163,49 +156,49 @@
 	"baget_classic": {
 		"0": {
 			"type": "radio",
-			"value": "baget_classic_0",
+			"value": 200,
 			"checked": "checked",
 			"img": "baget-default.png"
 		},
 		"1": {
 			"type": "radio",
-			"value": "baget_classic_1",
+			"value": 200,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"2": {
 			"type": "radio",
-			"value": "baget_classic_2",
+			"value": 200,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"3": {
 			"type": "radio",
-			"value": "baget_classic_3",
+			"value": 200,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"4": {
 			"type": "radio",
-			"value": "baget_classic_4",
+			"value": 200,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"5": {
 			"type": "radio",
-			"value": "baget_classic_5",
+			"value": 250,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"6": {
 			"type": "radio",
-			"value": "baget_classic_6",
+			"value": 300,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"7": {
 			"type": "radio",
-			"value": "baget_classic_7",
+			"value": 300,
 			"checked": "",
 			"img": "baget-default.png"
 		}
@@ -213,25 +206,25 @@
 	"baget_premium": {
 		"0": {
 			"type": "radio",
-			"value": "baget_premium_0",
+			"value": 300,
 			"checked": "checked",
 			"img": "baget-default.png"
 		},
 		"1": {
 			"type": "radio",
-			"value": "baget_premium_1",
+			"value": 300,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"2": {
 			"type": "radio",
-			"value": "baget_premium_2",
+			"value": 300,
 			"checked": "",
 			"img": "baget-default.png"
 		},
 		"3": {
 			"type": "radio",
-			"value": "baget_premium_3",
+			"value": 300,
 			"checked": "",
 			"img": "baget-default.png"
 		}
@@ -241,14 +234,14 @@
 		"0": {
 			"label": "нет",
 			"type": "radio",
-			"value": "gel_0",
+			"value": "",
 			"checked": "checked",
 			"img": "baget-empty.png"
 		},
 		"1": {
 			"label": "стандарт",
 			"type": "radio",
-			"value": "gel_1",
+			"value": 100,
 			"checked": "",
 			"img": "baget-gel.png"
 		}
@@ -258,21 +251,21 @@
 		"0": {
 			"label": "нет",
 			"type": "radio",
-			"value": "mat_0",
+			"value": "",
 			"checked": "checked",
 			"img": "baget-empty.png"
 		},
 		"1": {
 			"label": "белый 4мм",
 			"type": "radio",
-			"value": "mat_1",
+			"value": 200,
 			"checked": "",
 			"img": "baget-mat-4mm.png"
 		},
 		"2": {
 			"label": "белый 8мм",
 			"type": "radio",
-			"value": "mat_1",
+			"value": 400,
 			"checked": "",
 			"img": "baget-mat-8mm.png"
 		}
@@ -282,7 +275,7 @@
 		"0": {
 			"label": "нет",
 			"type": "checkbox",
-			"value": "glass",
+			"value": 300,
 			"checked": "checked",
 			"img": "baget-glass.png"
 		}

@@ -25,7 +25,7 @@
 						<a class="header__social-item header__social-item_wapp" href="./"></a>
 					</div>
 					<nav class="header__navi">
-						<a class="header__navi-item" href="./calculator.html">о нас</a>
+						<a class="header__navi-item" href="./page.html">о нас</a>
 						<a class="header__navi-item" href="./calculator.html">багетная мастерская</a>
 						<a class="header__navi-item" href="./calculator.html">пункты самовывоза</a>
 						<a class="header__navi-item" href="./calculator.html">доставка</a>
@@ -220,21 +220,7 @@
    </div>
 </div>
 <div class="properties__block">
-   <h3 class="properties__title">НАТЯЖКА НА ПОДРАМНИК</h3>
-   <div class="properties__items">
-      <label class="properties__item">
-         <input type="radio" name="stretcher" checked>
-         <img src="./images/baget-stretcher-standart.png" alt=""><span>стандарт</span>
-      </label>
-      <label class="properties__item">
-         <input type="radio" name="stretcher">
-         <img src="./images/baget-stretcher-studio.png" alt=""><span>студийный</span>
-      </label>
-      <a class="properties__item properties__item_help" href="./" data-modal="help"></a>
-   </div>
-</div>
-<div class="properties__block">
-   <h3 class="properties__title">Текстурный гель</h3>
+   <h3 class="properties__title">Лак и текстурный гель</h3>
    <div class="properties__items">
       <label class="properties__item">
          <input type="radio" name="gel" checked>
@@ -242,7 +228,11 @@
       </label>
       <label class="properties__item">
          <input type="radio" name="gel">
-         <img src="./images/baget-gel.png" alt=""><span>да</span>
+         <img src="./images/baget-gel.png" alt=""><span>лак</span>
+      </label>
+      <label class="properties__item">
+         <input type="radio" name="gel">
+         <img src="./images/baget-gel.png" alt=""><span>гель</span>
       </label>
       <a class="properties__item properties__item_help" href="./" data-modal="help"></a>
    </div>
@@ -253,6 +243,114 @@
          <img src="./images/baget-gel.png" alt=""><span>Картина доступна с ручной росписью красками</span>
       </div>
       <a href="" class="properties__item properties__item_note properties__item_help" data-modal="help"></a>
+   </div>
+</div>
+<div id="baget-test" class="properties__block">
+   <h3 class="properties__title">Багет для картины</h3>
+   <div class="properties__items">
+      <label data-type="baget-empty" class="properties__item">
+         <input type="radio" name="baget-type" checked>
+         <img src="./images/baget-empty.png" alt=""><span>нет</span>
+      </label>
+      <label data-type="baget-enable" class="properties__item">
+         <input type="radio" name="baget-type">
+         <img src="./images/baget-simple.png" alt=""><span>простой</span>
+      </label>
+      <label data-type="baget-enable" class="properties__item">
+         <input type="radio" name="baget-type">
+         <img src="./images/baget-classic.png" alt=""><span>классика</span>
+      </label>
+      <label data-type="baget-enable" class="properties__item">
+         <input type="radio" name="baget-type">
+         <img src="./images/baget-premium.png" alt=""><span>премиум</span>
+      </label>
+      <a class="properties__item properties__item_help" href="./" data-modal="help"></a>
+   </div>
+
+   <div class="properties__items_modif">
+      <div class="properties__items-wrapper">
+         <label class="properties__item">
+            <input type="radio" name="baget" checked>
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+      </div>
+      <div class="properties__items-wrapper">
+         <label class="properties__item">
+            <input type="radio" name="baget" checked>
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+      </div>
+      <div class="properties__items-wrapper">
+         <label class="properties__item">
+            <input type="radio" name="baget" checked>
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+         <label class="properties__item">
+            <input type="radio" name="baget">
+            <img src="./images/baget-default.png" alt="">
+         </label>
+      </div>
+
+   </div>
+</div>
+<div id="pasportu-test" class="properties__block">
+   <h3 class="properties__title">Паспарту</h3>
+   <div class="properties__items">
+      <label class="properties__item">
+         <input type="radio" name="mat" checked>
+         <img src="./images/baget-empty.png" alt=""><span>нет</span>
+      </label>
+      <label class="properties__item">
+         <input type="radio" name="mat">
+         <img src="./images/baget-mat-4mm.png" alt=""><span>белый 4 см</span>
+      </label>
+      <label class="properties__item">
+         <input type="radio" name="mat">
+         <img src="./images/baget-mat-8mm.png" alt=""><span>белый 8 см</span>
+      </label>
+      <a class="properties__item properties__item_help" href="./" data-modal="help"></a>
+   </div>
+</div>
+<div id="glass-test" class="properties__block">
+   <h3 class="properties__title">Стекло для рамы</h3>
+   <div class="properties__items">
+      <label class="properties__item">
+         <input type="radio" name="glass" checked>
+         <img src="./images/baget-glass.png" alt=""><span>да</span>
+      </label>
+      <a class="properties__item properties__item_help" href="./" data-modal="help"></a>
    </div>
 </div>
 

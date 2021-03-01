@@ -10,6 +10,11 @@
 
 	&__size {
 		margin-bottom: 30px;
+		
+		&-count, &-sm {
+			font-size: 12px;
+			display: block;
+		}
 	}
 
 	&__size-select {
@@ -34,6 +39,7 @@
 
 	&__block {
 		margin-bottom: 10px;
+		max-width: 400px;
 
 		&_note {
 			border-top: 1px solid #ddd;

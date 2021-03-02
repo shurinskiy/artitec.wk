@@ -90,9 +90,16 @@
 	}
 
 	&__material-select {
+		a {
+			display: inline-block;
+			height: 20px;
+			margin-bottom: 0;
+		}
+
 		&-wrapper {
 			max-width: 250px;
 			width: 100%;
+			display: inline-block;
 			position: relative;
 			    background: url("./images/arr-down.svg") right 10px center/12px 7px no-repeat transparent;
 		}

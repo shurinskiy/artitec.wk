@@ -29,7 +29,7 @@
 			"label": "нет",
 			"type": "radio",
 			"value": "",
-			"checked": "checked",
+			"checked": "",
 			"img": "baget-empty.png",
 			"deps": [
 				"empty"
@@ -39,7 +39,7 @@
 			"label": "стандарт",
 			"type": "radio",
 			"value": "",
-			"checked": "",
+			"checked": "checked",
 			"img": "baget-stretcher-standart.png",
 			"deps": [
 				"painting",

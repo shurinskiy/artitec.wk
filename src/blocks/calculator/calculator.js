@@ -7,8 +7,8 @@ import options from './calculator.json'
 	let $acttionPrice = $('.calculator__left-price-old').children('span');
 	let $getSizes = $('.calculator__size-width, .calculator__size-height').children('input');
 
-	let getWidth = $('.calculator__size-width input');
-	let getHeight = $('.calculator__size-height input');
+	let $getWidth = $('.calculator__size-width input');
+	let $getHeight = $('.calculator__size-height input');
 
 	// Главная функция отрисовки блоков с инпутами
 	let render = function (deps, current) {
@@ -39,10 +39,15 @@ import options from './calculator.json'
 				}
 			}
 
+			if (!dep.includes('empty') && !dep.includes('baget_')) {
+				html += `<a class="properties__item properties__item_help" href="./" data-modal="${dep}"></a>`;
+			}
+
 			html += `</div></div>`;
 
-
 		});
+
+
 
 		if (current) {
 			current.nextAll().remove();
@@ -76,20 +81,35 @@ import options from './calculator.json'
 		$acttionPrice.html(total - getPrice);
 	};
 
-	// let proportionalSize = () => {
-	// 	if ($('.calculator__size-proportional input:checked')) {
-	// 		getHeight.val() = getWidth.val() * 1.5;
-	// 	}
-	// }
+	let proportionalSizes = (width) => {
+
+		if ($('#proportional:checked').length) {
+
+			if (width) {
+				//console.log("width");
+				$getHeight.val(Math.floor($getWidth.val() * 1.5));
+			} else {
+				//console.log("height");
+				$getWidth.val(Math.floor($getHeight.val() / 1.5));
+			}
+		}
+	};
 
 	$getSizes.on('change', function () {
 		let $self = $(this);
+		if ($self.parent().attr('class').includes('width')) {
 
-		if ($self.parent().hasClass('.calculator__size-width')) {
+			proportionalSizes(true);
+
 			countPrice($self.val(), false);
+
+
 		} else {
+
+			proportionalSizes();
+
 			countPrice(false, $self.val());
-		}
+		};
 	});
 
 	// Обработчик на селект
@@ -111,6 +131,5 @@ import options from './calculator.json'
 
 	// Вызывается в первую очередь
 	render();
-
 	countPrice();
 })();

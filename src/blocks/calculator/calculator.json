@@ -273,7 +273,7 @@
 	"glass": {
 		"title": "Стекло для рамы",
 		"0": {
-			"label": "нет",
+			"label": "да",
 			"type": "checkbox",
 			"value": 300,
 			"checked": "checked",

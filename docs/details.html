@@ -80,8 +80,8 @@
 
 <div class="breadcrumbs">
 	<div class="wrapper">
-		<div class="breadcrumbs__inner">
-			<div class="breadcrumbs__links ">
+		<div class="breadcrumbs__inner breadcrumbs__inner_offset">
+			<div class="breadcrumbs__links">
 				<a href="./" class="breadcrumbs__link">Главная</a>
 				<span>&gt;</span>
 				<span class="breadcrumbs__link breadcrumbs__link_current">Горы среди гор</span>
@@ -91,12 +91,13 @@
 </div>
 
 <main class="main">
-   <div class="wrapper">
-      <div class="main__inner">
-         <side class="main__side sidebar">
-            <div class="sidebar__inner">
-               <span class="sidebar__toggle"></span>
-               <div class="sidebar-item categories">
+	<div class="wrapper">
+		<div class="main__inner">
+			<side class="main__side sidebar">
+				<div class="sidebar__inner">
+					<span class="sidebar__toggle"></span>
+
+					<div class="sidebar-item categories">
 	<div class="categories__item">
 		<h3>Холсты</h3>
 		<div class="categories__subitems">
@@ -188,107 +189,72 @@
 
 
 
-            </div>
-         </side>
-         <div class="main__content detail">
-            <h1 class="detail__title">Горы среди гор</h1>
-            <div class="detail__card">
-               <div class="detail__gallery gallery" data-blue="выгодно!">
-                  <div class="gallery__items owl-carousel">
-                     <div class="gallery__item"><img src="./images/slider-image-2.png" alt=""></div>
-                     <div class="gallery__item"><img src="./images/slider-image.png" alt=""></div>
-                     <div class="gallery__item"><img src="./images/slider-image-2.png" alt=""></div>
-                     <div class="gallery__item"><img src="./images/slider-image.png" alt=""></div>
-                  </div>
-                  <div class="gallery__nav">
-                     <div class="gallery__dots"></div>
-                  </div>
-               </div>
-               <div class="detail__prop properties">
-                  <div class="detail__prop-top">
-                     <span>Код товара: hp0112</span>
-                     <span>Автор: Дровнин Илья</span>
-                  </div>
-                  <div class="properties__size">
-   <h3 class="properties__title">РАЗМЕР, см</h3>
-   <div class="properties__size-select mb-2">
-      <select name="sizes">
-         <option value="40x60" selected>40 x 60</option>
-         <option value="60x80">60 x 80</option>
-         <option value="80x100">80 x 100</option>
-      </select>
-   </div>
-   <span class="properties__size-count">Количество модулей: 5</span>
-   <span class="properties__size-sm">Размеры модулей, см: 40х30, 50х60, 60х70, 50х60, 40х30</span>
-</div>
-<div class="properties__block">
-   <h3 class="properties__title">НАТЯЖКА НА ПОДРАМНИК</h3>
-   <div class="properties__items">
-      <label data-type="standart" class="properties__item">
-         <input type="radio" name="stretcher" checked>
-         <img src="./images/baget-stretcher-standart.png" alt=""><span>стандарт</span>
-      </label>
-      <label data-type="studio" class="properties__item">
-         <input type="radio" name="stretcher">
-         <img src="./images/baget-stretcher-studio.png" alt=""><span>студийный</span>
-      </label>
-      <a class="properties__item properties__item_help" href="./" data-modal="stretcher"></a>
-   </div>
-</div>
-<div class="properties__block">
-   <h3 class="properties__title">Лак и текстурный гель</h3>
-   <div class="properties__items">
-      <label class="properties__item">
-         <input type="radio" name="gel" checked>
-         <img src="./images/baget-empty.png" alt=""><span>нет</span>
-      </label>
-      <label class="properties__item">
-         <input type="radio" name="gel">
-         <img src="./images/baget-gel.png" alt=""><span>лак</span>
-      </label>
-      <label class="properties__item">
-         <input type="radio" name="gel">
-         <img src="./images/baget-gel.png" alt=""><span>гель</span>
-      </label>
-      <a class="properties__item properties__item_help" href="./" data-modal="gelVarnish"></a>
-   </div>
-</div>
-<div class="properties__block properties__block_note">
-   <div class="properties__items">
-      <div class="properties__item properties__item_note">
-         <img src="./images/baget-gel.png" alt=""><span>Картина доступна с ручной росписью красками</span>
-      </div>
-      <a href="" class="properties__item properties__item_note properties__item_help" data-modal="help"></a>
-   </div>
-</div>
+				
+				</div>
+			</side>
+			<div class="main__content detail">
+				<h1 class="detail__title">Горы среди гор</h1>
+				<div class="detail__card">
+					<div class="detail__gallery gallery" data-blue="выгодно!">
+						<div class="gallery__items owl-carousel">
+							<div class="gallery__item"><img src="./images/slider-image-2.png" alt=""></div>
+							<div class="gallery__item"><img src="./images/slider-image.png" alt=""></div>
+							<div class="gallery__item"><img src="./images/slider-image-2.png" alt=""></div>
+							<div class="gallery__item"><img src="./images/slider-image.png" alt=""></div>
+						</div>
+						<div class="gallery__nav">
+							<div class="gallery__dots"></div>
+						</div>
+					</div>
+					<div class="detail__calculator calculator">
+						<div class="detail__prop-top">
+							<span>Код товара: hp0112</span>
+							<span>Автор: Дровнин Илья</span>
+						</div>
+						<select class="calculator__hidden" name="materials">
+							<option value="2.3" data-deps="stretcher, gelvarnish, bagets" selected></option>
+						</select>
+						<div class="calculator__fixed-sizes">
+							<h3 class="calculator__fixed-title">РАЗМЕР, см</h3>
+							<div class="calculator__fixed-select">
+								<select name="fixed_sizes">
+									<option value="40,60" selected>40 x 60</option>
+									<option value="60,80">60 x 80</option>
+									<option value="80,100">80 x 100</option>
+								</select>
+							</div>
+						</div>
 
-<div class="properties__block"></div>
-                  <div class="detail__price">
-                     <span>3500 ₽</span>
-                     <span>2600 ₽</span>
-                  </div>
-                  <div class="detail__buttons">
-                     <a class="detail__button detail__button_tocart" href="./">В корзину</a>
-                     <a class="detail__button detail__button_defer" href="./">Отложить</a>
-                  </div>
-               </div>
-            </div>
-            <div class="detail__info">
-               <div class="detail__info-item detail__info-item_time">
-                  <h3 class="detail__info-title"><span>Сроки изготовления</span></h3>
-                  <p><span>Холсты и постеры</span> <span>1-2 рабочих дня</span></p>
-                  <p><span>Имитация живописи</span> <span>2-3 рабочих дня</span></p>
-                  <p><span>Шторы и ширмы</span> <span>3-5 рабочих дня</span></p>
-               </div>
-               <div class="detail__info-item detail__info-item_delivery">
-                  <h3 class="detail__info-title"><span>Доставка</span></h3>
-                  <p>Доставляем заказы по России и всему миру в самые короткие сроки!</p>
-                  <p>Мы работаем с несколькими транспортными компаниями, поэтому сможем подобрать самый быстрый и
-                     недорогой вариант доставки.</p>
-               </div>
-            </div>
-            <div class="detail__cases">
-               <div class="detail__case">
+						<!--Dynamic content -->
+						<div class="detail__prop properties calculator__workspace"></div>
+						<!-- End of dynamic content -->
+
+						<div class="detail__price calculator__total">
+							<p><span>3500</span> ₽</p>
+							<p><span>2600</span> ₽</p>
+						</div>
+						<div class="detail__buttons">
+							<a class="detail__button detail__button_tocart" href="./">В корзину</a>
+							<a class="detail__button detail__button_defer" href="./">Отложить</a>
+						</div>
+					</div>
+				</div>
+				<div class="detail__info">
+					<div class="detail__info-item detail__info-item_time">
+						<h3 class="detail__info-title"><span>Сроки изготовления</span></h3>
+						<p><span>Холсты и постеры</span> <span>1-2 рабочих дня</span></p>
+						<p><span>Имитация живописи</span> <span>2-3 рабочих дня</span></p>
+						<p><span>Шторы и ширмы</span> <span>3-5 рабочих дня</span></p>
+					</div>
+					<div class="detail__info-item detail__info-item_delivery">
+						<h3 class="detail__info-title"><span>Доставка</span></h3>
+						<p>Доставляем заказы по России и всему миру в самые короткие сроки!</p>
+						<p>Мы работаем с несколькими транспортными компаниями, поэтому сможем подобрать самый быстрый и недорогой вариант доставки.</p>
+					</div>
+				</div>
+				<div class="detail__cases">
+					
+					<div class="detail__case">
 	<div class="detail__case-side">
 		<h2 class="detail__case-title">Премиум печать на холсте</h2>
 		<div class="detail__case-text">
@@ -302,7 +268,7 @@
 	</div>
 </div>
 
-               <div class="detail__case">
+					<div class="detail__case">
 	<div class="detail__case-side">
 		<h2 class="detail__case-title">Как настоящая картина</h2>
 		<div class="detail__case-text">
@@ -316,7 +282,7 @@
 	</div>
 </div>
 
-               <div class="detail__case">
+					<div class="detail__case">
 	<div class="detail__case-side">
 		<h2 class="detail__case-title">Подрамники для холста</h2>
 		<div class="detail__case-text">
@@ -330,11 +296,13 @@
 	</div>
 </div>
 
-            </div>
-         </div>
-      </div>
-   </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
+
 
 
 
@@ -375,86 +343,92 @@
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script>
 
-<div class="modal__hidden" id="order">
-	<form class="modal__form" action="/">
-		<div class="modal__field">
-			<span class="modal__label">Ваш e-mail</span>
-			<input class="modal__input" type="text" name="email" placeholder="E-mail">
-		</div>
-		<div class="modal__field">
-			<span class="modal__label">Ваше имя</span>
-			<input class="modal__input" type="text" name="name" placeholder="Имя">
-		</div>
-		<div class="modal__field">
-			<span class="modal__label">Ваш телефон</span>
-			<input class="modal__input" type="text" name="phone" placeholder="Телефон (в произвольной форме)">
-		</div>
-		<div class="modal__field">
-			<input class="modal__input" type="text" name="city" placeholder="Ваш город">
-		</div>
-		<div class="modal__field">
-			<label class="modal__file"><input type="file" name="file">Загрузить файлы</label>
-		</div>
-		<div class="modal__field">
-			<textarea class="modal__textarea" name="comment" placeholder="Ваш комментарий, если необходим"></textarea>
-		</div>
-		<div class="modal__bottom">
-			<input class="modal__submit" type="submit" value="Заказать">
-			<p class="modal__note">Нажимая кнопку, вы принимаете условия <a href="./">публичной оферты</a> и даете согласие
-				на обработку <a href="./">персональных данных</a></p>
-		</div>
-	</form>
-</div>
+<div class="modal__hidden">
+	
+	<div id="order">
+		<form class="modal__form" action="/">
+			<div class="modal__field">
+				<span class="modal__label">Ваш e-mail</span>
+				<input class="modal__input" type="text" name="email" placeholder="E-mail">
+			</div>
+			<div class="modal__field">
+				<span class="modal__label">Ваше имя</span>
+				<input class="modal__input" type="text" name="name" placeholder="Имя">
+			</div>
+			<div class="modal__field">
+				<span class="modal__label">Ваш телефон</span>
+				<input class="modal__input" type="text" name="phone" placeholder="Телефон (в произвольной форме)">
+			</div>
+			<div class="modal__field">
+				<input class="modal__input" type="text" name="city" placeholder="Ваш город">
+			</div>
+			<div class="modal__field">
+				<label class="modal__file"><input type="file" name="file">Загрузить файлы</label>
+			</div>
+			<div class="modal__field">
+				<textarea class="modal__textarea" name="comment" placeholder="Ваш комментарий, если необходим"></textarea>
+			</div>
+			<div class="modal__bottom">
+				<input class="modal__submit" type="submit" value="Заказать">
+				<p class="modal__note">Нажимая кнопку, вы принимаете условия <a href="./">публичной оферты</a> и даете согласие на обработку <a href="./">персональных данных</a></p>
+			</div>
+		</form>
+	</div>
 
-<div class="modal__hidden" id="help">
-	<img src="./images/canvas_size_modul.jpg" alt="">
-</div>
+	<div id="help">
+		<img src="./images/canvas_size_modul.jpg" alt="">
+	</div>
 
-<div class="modal__hidden" id="gelVarnish">
-	<p>Акриловый текстурный гель. Наносится художником вручную кистью. При высыхании образует прозрачную, глянцевую,
-		эластичную
-		пленку. Придаёт изображению объем и текстуру. Позволяет создавать эффект «мазка».</p>
-	<iframe width="" height="" src="https://www.youtube.com/embed/I5okwYus9QY" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="gelvarnish">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/I5okwYus9QY?autoplay=1"></button>
+		</div>
+		<p>Акриловый текстурный гель. Наносится художником вручную кистью. При высыхании образует прозрачную, глянцевую, эластичную пленку. Придаёт изображению объем и текстуру. Позволяет создавать эффект «мазка».</p>
+	</div>
 
-<div class="modal__hidden" id="stretcher">
-	<p>Подрамник из натурального дерева. Торцы (бока) подрамника будут обтянуты изображением. При этом изображение с
-		фронтальной плоскости не теряется - на торцы мы создаем его продолжение путем растяжения и копирования.</p>
-	<p>Широкий подрамник используется в картинах без рам и выглядит эффектно.</p>
-	<iframe width="" height="" src="https://www.youtube.com/embed/8jz5RXqZlwU" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-	<img src="./images/podramnik_modul.png" alt="" style="width: 100%;">
-</div>
+	<div id="stretcher">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/8jz5RXqZlwU?autoplay=1"></button>
+		</div>
+		<p>Подрамник из натурального дерева. Торцы (бока) подрамника будут обтянуты изображением. При этом изображение с фронтальной плоскости не теряется - на торцы мы создаем его продолжение путем растяжения и копирования.</p>
+		<p>Широкий подрамник используется в картинах без рам и выглядит эффектно.</p>
+		<img src="./images/podramnik_modul.png" alt="">
+	</div>
 
-<div class="modal__hidden" id="bagets">
-	<p>Если материал печати бумага — стоимость рамы включает в себя багет, стекло, картонный задник и подвес.</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="bagets">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+		<p>Если материал печати бумага — стоимость рамы включает в себя багет, стекло, картонный задник и подвес.</p>
+	</div>
 
-<div class="modal__hidden" id="rigidbase">
-	<p>Накатка на жесткую основу</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="rigidbase">
+		<h2 class="modal__title">Накатка на жесткую основу</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
 
-<div class="modal__hidden" id="glass">
-	<p>Стекло</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="glass">
+		<h2 class="modal__title">Стекло</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
 
-<div class="modal__hidden" id="mat">
-	<p>Паспарту</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
+	<div id="mat">
+		<h2 class="modal__title">Паспарту</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
+
 </div>
 
 

@@ -14,7 +14,7 @@
 
 	&__side {
 		width: 47%;
-		padding: 22px 60px 0;
+		padding: 22px 35px 0;
 		
 		@include media('<=md') {
 			width: 80%;
@@ -134,5 +134,4 @@
 		left: 10px;
 		background: url('./images/arr-left.svg') left 11px center / auto no-repeat #bfbfbf;
 	}
-
 }

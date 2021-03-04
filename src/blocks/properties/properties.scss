@@ -1,42 +1,6 @@
 .properties {
 	$self: &;
 
-	&__title {
-		font-family: "SSB", sans-serif;
-		font-size: 18px;
-		line-height: 1.1;
-		margin-bottom: 10px;
-	}
-
-	&__size {
-		margin-bottom: 30px;
-		
-		&-count, &-sm {
-			font-size: 12px;
-			display: block;
-		}
-	}
-
-	&__size-select {
-		display: inline-block;
-		background: url('./images/arr-down.svg') right 10px center / 12px 7px no-repeat transparent;
-		border: 1px solid #ddd;
-		width: 100%;
-		max-width: 300px;
-
-		select {
-			appearance: none;
-			background: none;
-			outline: none;
-			border: none;
-			width: 100%;
-			padding: 5px 10px 7px;
-			font-family: "SL", sans-serif;
-			font-size: 24px;
-			line-height: 1.1;
-		}
-	}
-
 	&__block {
 		margin-bottom: 10px;
 		max-width: 400px;
@@ -52,9 +16,7 @@
 	&__items {
 		display: flex;
 		flex-flow: row wrap;
-		&_modif {
-			flex-direction: column;
-		}
+
 		&:not(:first-child) {
 			padding-top: 10px;
 		}
@@ -69,12 +31,21 @@
 		box-sizing: border-box;
 		cursor: pointer;
 		margin-bottom: 15px;
-		
+		width: 65px;
+		height: 65px;
+	
+		@include media('<=xxxs') {
+			width: 50px;
+			height: 50px;
+		}
+			
 		&:not(:last-of-type) {
 			margin-right: 20px;
+
 			@include media('<=xxs-new') {
 				margin-right: 15px;
 			}
+
 			@include media('<=xxxs') {
 				margin-right: 10px;
 			}
@@ -96,10 +67,7 @@
 			margin-bottom: 5px;
 			border: 1px solid #fff;
 			outline: 1px solid $grey;
-			@include media('<=xxs-new') {
-				width: 55px;
-				height: 55px;
-			}
+
 			@include media('<=xxxs') {
 				width: 50px;
 				height: 50px;
@@ -111,50 +79,17 @@
 			font-family: "SL", sans-serif;
 			font-size: 14px;
 			line-height: 1.1;
-			@include media('<=xxs-new') {
-				font-size: 12px;
-			}
-
+			white-space: nowrap;
 		}
 
-		&_help {
-			width: 65px;
-			height: 65px;
-			position: relative;
-			@include media('<=xxs-new') {
-				width: 55px;
-				height: 55px;
-			}
-			@include media('<=xxxs') {
-				width: 50px;
-				height: 50px;
-			}
-			
-			&::before {
-				display: block;
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 24px;
-				height: 24px;
-				border-radius: 50%;
-				background: url('./images/prop-help.svg') center / auto no-repeat #e7e7e7;
-				// transition: background-color 0.3s ease-in;
-			}
-			
-			&:hover::before {
-				background: url('./images/prop-help-white.svg') center / auto no-repeat $cyan;
-			}
-		}
-
+		//?
 		&_help#{&}_note {
 			width: 32px;
 			height: 32px;
 			margin-right: 0;
 		}
 
+		//?
 		&_note {
 			display: flex;
 			margin-right: 20px;
@@ -171,7 +106,6 @@
 				text-transform: uppercase;
 				max-width: 240px;
 			}
-			
 		}
 	}
 }

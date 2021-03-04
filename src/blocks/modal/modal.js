@@ -41,17 +41,31 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 			.fadeIn();
 	}
 	
+	// Открыть модальное окно
 	$(`[data-${cls}]`).on('click', open);
-	
+	// Открыть модальное окно из уже открытого окна
 	$modal.on('click', `[data-${cls}]`, open);
-	
+	// Открыть модальное окно из динамического контента блока properties
+	$('.properties').on('click', `[data-${cls}]`, open);
+	// Закрыть окошко
 	$(`.${cls}__close`).on('click', close);
-
-	$(window).on('click', function(e) {
-		if (e.target == $modal[0]) close(e);
+	// Закрыть по клику мимо окошка или esc
+	$(window).on('click keyup', function(e) {
+		if (e.target == $modal[0] || e.which == 27) close(e);
 	});
 
 
+	// Загрузка видео с youtube
+	$modal.on('click', '.modal__video-play', function(e) {
+		let $self = $(this);
 
+		$self
+		.parent('.modal__video')
+		.find('iframe')
+		.attr('src', $self.data('youtubeSrc'))
+		.end()
+		.end()
+		.fadeOut();
+	});
 
 })();

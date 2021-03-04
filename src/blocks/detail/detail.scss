@@ -27,14 +27,18 @@
 		}
 	}
 	
-	&__prop {
+	&__calculator {
+		padding: 0 0 0 35px;
 		width: 50%;
-		padding-left: 35px;
-		
+
 		@include media('<=lg') {
 			padding: 0;
 			width: 100%;
 		}
+	}
+
+	&__prop {
+		
 	}
 
 	&__prop-top {
@@ -60,11 +64,12 @@
 		padding-top: 30px;
 		margin-bottom: 40px;
 
-		span {
+		p {
 			display: block;
 			font-size: 30px;
 			line-height: 1.1;
 			position: relative;
+			margin-bottom: 0;
 
 			&::before {
 				display: block;

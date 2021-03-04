@@ -7,14 +7,18 @@
 	
 	&__inner {
 		margin-left: auto;
-		width: calc(99.9% / 24 * 18);
+		width: calc(99.9% / 24 * 24);
+
+		&_offset {
+			width: calc(99.9% / 24 * 18);
 		
-		@include media('<=md') {
-			width: calc(99.9% / 24 * 16);
-		}
-		
-		@include media('<=sm') {
-			width: 100%;
+			@include media('<=md') {
+				width: calc(99.9% / 24 * 16);
+			}
+			
+			@include media('<=sm') {
+				width: 100%;
+			}
 		}
 	}
 	

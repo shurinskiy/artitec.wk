@@ -1,7 +1,7 @@
 @@include("_head.html")
 @@include("_header.html")
 @@include("_action.html")
-@@include("_breadcrumbs.html", {"current": "Горы среди гор"})
+@@include("_breadcrumbs.html", {"current": "Горы среди гор", "class": "breadcrumbs__inner_offset"})
 
 <main class="main">
 	<div class="wrapper">
@@ -9,7 +9,9 @@
 			<side class="main__side sidebar">
 				<div class="sidebar__inner">
 					<span class="sidebar__toggle"></span>
+
 					@@include("_filters.html", {"classes":"sidebar-item"})
+				
 				</div>
 			</side>
 			<div class="main__content detail">
@@ -26,15 +28,32 @@
 							<div class="gallery__dots"></div>
 						</div>
 					</div>
-					<div class="detail__prop properties">
+					<div class="detail__calculator calculator">
 						<div class="detail__prop-top">
 							<span>Код товара: hp0112</span>
 							<span>Автор: Дровнин Илья</span>
 						</div>
-						@@include("_properties.html")
-						<div class="detail__price">
-							<span>3500 ₽</span>
-							<span>2600 ₽</span>
+						<select class="calculator__hidden" name="materials">
+							<option value="2.3" data-deps="stretcher, gelvarnish, bagets" selected></option>
+						</select>
+						<div class="calculator__fixed-sizes">
+							<h3 class="calculator__fixed-title">РАЗМЕР, см</h3>
+							<div class="calculator__fixed-select">
+								<select name="fixed_sizes">
+									<option value="40,60" selected>40 x 60</option>
+									<option value="60,80">60 x 80</option>
+									<option value="80,100">80 x 100</option>
+								</select>
+							</div>
+						</div>
+
+						<!--Dynamic content -->
+						<div class="detail__prop properties calculator__workspace"></div>
+						<!-- End of dynamic content -->
+
+						<div class="detail__price calculator__total">
+							<p><span>3500</span> ₽</p>
+							<p><span>2600</span> ₽</p>
 						</div>
 						<div class="detail__buttons">
 							<a class="detail__button detail__button_tocart" href="./">В корзину</a>
@@ -56,9 +75,11 @@
 					</div>
 				</div>
 				<div class="detail__cases">
+					
 					@@include("_case.html", {"title": "Премиум печать на холсте"})
 					@@include("_case.html", {"title": "Как настоящая картина"})
 					@@include("_case.html", {"title": "Подрамники для холста"})
+
 				</div>
 			</div>
 		</div>

@@ -1,81 +1,87 @@
-<div class="modal__hidden" id="order">
-	<form class="modal__form" action="/">
-		<div class="modal__field">
-			<span class="modal__label">Ваш e-mail</span>
-			<input class="modal__input" type="text" name="email" placeholder="E-mail">
-		</div>
-		<div class="modal__field">
-			<span class="modal__label">Ваше имя</span>
-			<input class="modal__input" type="text" name="name" placeholder="Имя">
-		</div>
-		<div class="modal__field">
-			<span class="modal__label">Ваш телефон</span>
-			<input class="modal__input" type="text" name="phone" placeholder="Телефон (в произвольной форме)">
-		</div>
-		<div class="modal__field">
-			<input class="modal__input" type="text" name="city" placeholder="Ваш город">
-		</div>
-		<div class="modal__field">
-			<label class="modal__file"><input type="file" name="file">Загрузить файлы</label>
-		</div>
-		<div class="modal__field">
-			<textarea class="modal__textarea" name="comment" placeholder="Ваш комментарий, если необходим"></textarea>
-		</div>
-		<div class="modal__bottom">
-			<input class="modal__submit" type="submit" value="Заказать">
-			<p class="modal__note">Нажимая кнопку, вы принимаете условия <a href="./">публичной оферты</a> и даете согласие
-				на обработку <a href="./">персональных данных</a></p>
-		</div>
-	</form>
-</div>
+<div class="modal__hidden">
+	
+	<div id="order">
+		<form class="modal__form" action="/">
+			<div class="modal__field">
+				<span class="modal__label">Ваш e-mail</span>
+				<input class="modal__input" type="text" name="email" placeholder="E-mail">
+			</div>
+			<div class="modal__field">
+				<span class="modal__label">Ваше имя</span>
+				<input class="modal__input" type="text" name="name" placeholder="Имя">
+			</div>
+			<div class="modal__field">
+				<span class="modal__label">Ваш телефон</span>
+				<input class="modal__input" type="text" name="phone" placeholder="Телефон (в произвольной форме)">
+			</div>
+			<div class="modal__field">
+				<input class="modal__input" type="text" name="city" placeholder="Ваш город">
+			</div>
+			<div class="modal__field">
+				<label class="modal__file"><input type="file" name="file">Загрузить файлы</label>
+			</div>
+			<div class="modal__field">
+				<textarea class="modal__textarea" name="comment" placeholder="Ваш комментарий, если необходим"></textarea>
+			</div>
+			<div class="modal__bottom">
+				<input class="modal__submit" type="submit" value="Заказать">
+				<p class="modal__note">Нажимая кнопку, вы принимаете условия <a href="./">публичной оферты</a> и даете согласие на обработку <a href="./">персональных данных</a></p>
+			</div>
+		</form>
+	</div>
 
-<div class="modal__hidden" id="help">
-	<img src="./images/canvas_size_modul.jpg" alt="">
-</div>
+	<div id="help">
+		<img src="./images/canvas_size_modul.jpg" alt="">
+	</div>
 
-<div class="modal__hidden" id="gelVarnish">
-	<p>Акриловый текстурный гель. Наносится художником вручную кистью. При высыхании образует прозрачную, глянцевую,
-		эластичную
-		пленку. Придаёт изображению объем и текстуру. Позволяет создавать эффект «мазка».</p>
-	<iframe width="" height="" src="https://www.youtube.com/embed/I5okwYus9QY" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="gelvarnish">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/I5okwYus9QY?autoplay=1"></button>
+		</div>
+		<p>Акриловый текстурный гель. Наносится художником вручную кистью. При высыхании образует прозрачную, глянцевую, эластичную пленку. Придаёт изображению объем и текстуру. Позволяет создавать эффект «мазка».</p>
+	</div>
 
-<div class="modal__hidden" id="stretcher">
-	<p>Подрамник из натурального дерева. Торцы (бока) подрамника будут обтянуты изображением. При этом изображение с
-		фронтальной плоскости не теряется - на торцы мы создаем его продолжение путем растяжения и копирования.</p>
-	<p>Широкий подрамник используется в картинах без рам и выглядит эффектно.</p>
-	<iframe width="" height="" src="https://www.youtube.com/embed/8jz5RXqZlwU" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-	<img src="./images/podramnik_modul.png" alt="" style="width: 100%;">
-</div>
+	<div id="stretcher">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/8jz5RXqZlwU?autoplay=1"></button>
+		</div>
+		<p>Подрамник из натурального дерева. Торцы (бока) подрамника будут обтянуты изображением. При этом изображение с фронтальной плоскости не теряется - на торцы мы создаем его продолжение путем растяжения и копирования.</p>
+		<p>Широкий подрамник используется в картинах без рам и выглядит эффектно.</p>
+		<img src="./images/podramnik_modul.png" alt="">
+	</div>
 
-<div class="modal__hidden" id="bagets">
-	<p>Если материал печати бумага — стоимость рамы включает в себя багет, стекло, картонный задник и подвес.</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="bagets">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+		<p>Если материал печати бумага — стоимость рамы включает в себя багет, стекло, картонный задник и подвес.</p>
+	</div>
 
-<div class="modal__hidden" id="rigidbase">
-	<p>Накатка на жесткую основу</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="rigidbase">
+		<h2 class="modal__title">Накатка на жесткую основу</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
 
-<div class="modal__hidden" id="glass">
-	<p>Стекло</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="glass">
+		<h2 class="modal__title">Стекло</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
 
-<div class="modal__hidden" id="mat">
-	<p>Паспарту</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
+	<div id="mat">
+		<h2 class="modal__title">Паспарту</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
+
 </div>

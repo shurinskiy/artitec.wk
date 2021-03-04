@@ -31,9 +31,7 @@
 			"value": "",
 			"checked": "",
 			"img": "baget-empty.png",
-			"deps": [
-				"empty"
-			]
+			"deps": ["empty"]
 		},
 		"1": {
 			"label": "стандарт",
@@ -42,7 +40,7 @@
 			"checked": "checked",
 			"img": "baget-stretcher-standart.png",
 			"deps": [
-				"painting",
+				"gelvarnish",
 				"bagets"
 			]
 		},
@@ -53,7 +51,7 @@
 			"checked": "",
 			"img": "baget-stretcher-studio.png",
 			"deps": [
-				"painting"
+				"gelvarnish"
 			]
 		}
 	},
@@ -82,9 +80,48 @@
 			"value": "",
 			"checked": "checked",
 			"img": "baget-empty.png",
+			"deps": ["empty"]
+		},
+		"1": {
+			"label": "простой",
+			"type": "radio",
+			"value": "",
+			"checked": "",
+			"img": "baget-simple.png",
 			"deps": [
-				"empty"
+				"baget_simple"
 			]
+		},
+		"2": {
+			"label": "классика",
+			"type": "radio",
+			"value": "",
+			"checked": "",
+			"img": "baget-classic.png",
+			"deps": [
+				"baget_classic"
+			]
+		},
+		"3": {
+			"label": "премиум",
+			"type": "radio",
+			"value": "",
+			"checked": "",
+			"img": "baget-premium.png",
+			"deps": [
+				"baget_premium"
+			]
+		}
+	},
+	"bagets_paper": {
+		"title": "Багет для картины",
+		"0": {
+			"label": "нет",
+			"type": "radio",
+			"value": "",
+			"checked": "checked",
+			"img": "baget-empty.png",
+			"deps": ["empty"]
 		},
 		"1": {
 			"label": "простой",
@@ -123,10 +160,6 @@
 			]
 		}
 	},
-	"bagets_canvas": {
-		"title": "Багет для картины"
-	},
-	"empty": {},
 	"baget_simple": {
 		"0": {
 			"type": "radio",
@@ -229,8 +262,8 @@
 			"img": "baget-default.png"
 		}
 	},
-	"gel": {
-		"title": "Текстурный гель",
+	"gelvarnish": {
+		"title": "Лак и текстурный гель",
 		"0": {
 			"label": "нет",
 			"type": "radio",
@@ -239,11 +272,18 @@
 			"img": "baget-empty.png"
 		},
 		"1": {
-			"label": "стандарт",
+			"label": "гель",
 			"type": "radio",
 			"value": 100,
 			"checked": "",
 			"img": "baget-gel.png"
+		},
+		"2": {
+			"label": "лак",
+			"type": "radio",
+			"value": 100,
+			"checked": "",
+			"img": "baget-varnish.png"
 		}
 	},
 	"mat": {
@@ -279,5 +319,6 @@
 			"checked": "checked",
 			"img": "baget-glass.png"
 		}
-	}
+	},
+	"empty": {}
 }

@@ -1,34 +1,30 @@
 import options from './calculator.json'
 
 (() => {
-	let $select = $('.calculator__material-select');
+	let $select = $('select[name="materials"]');
 	let $space = $('.calculator__workspace');
-	let $setPrice = $('.calculator__left-price-new').children('span');
-	let $acttionPrice = $('.calculator__left-price-old').children('span');
-	let $getSizes = $('.calculator__size-width, .calculator__size-height').children('input');
-
-	let $getWidth = $('.calculator__size-width input');
-	let $getHeight = $('.calculator__size-height input');
-
+	let $price = $('.calculator__total').find('p:first-child span');
+	let $price_old = $('.calculator__total').find('p:last-child span');
+	let $size_fields = $('input.calculator__sizes-input');
+	let $width_field = $('input.calculator__sizes-input[name="width"]');
+	let $height_field = $('input.calculator__sizes-input[name="height"]');
+	let $fixed_sizes = $('select[name="fixed_sizes"]');
+	
+	
 	// Главная функция отрисовки блоков с инпутами
-	let render = function (deps, current) {
+	let render = (deps, current) => {
 		if (!$select.length) return;
-
+		
 		let html = '';
 		deps = deps || $select.find(':selected').data('deps').split(',');
-		//console.log(deps);
 
-
-		deps.forEach(function (dep, index) {
+		deps.forEach((dep, index) => {
 			dep = dep.trim();
 			html += `<div class="properties__block">
 				<h3 class="properties__title">${options[dep].title ?? ''}</h3>
 				<div class="properties__items">`;
 
 			for (const input in options[dep]) {
-
-
-
 				if (input !== 'title') {
 					let inp = options[dep][input];
 					html += `<label class="properties__item">
@@ -40,14 +36,11 @@ import options from './calculator.json'
 			}
 
 			if (!dep.includes('empty') && !dep.includes('baget_')) {
-				html += `<a class="properties__item properties__item_help" href="./" data-modal="${dep}"></a>`;
+				html += `<a class="properties__item help" href="./" data-modal="${dep}"></a>`;
 			}
 
 			html += `</div></div>`;
-
 		});
-
-
 
 		if (current) {
 			current.nextAll().remove();
@@ -57,68 +50,61 @@ import options from './calculator.json'
 		}
 	}
 
-	let countPrice = (width, height) => {
-
+	// Подсчет общей стоимости с учетом выбранных вариантов
+	let priceCount = (width, height) => {
 		let total = 0;
 
-		width = width || $('.calculator__size-width input').val();
-		height = height || $('.calculator__size-height input').val();
+		width = width || $width_field.val() || $fixed_sizes.val().split(',')[0];
+		height = height || $height_field.val() || $fixed_sizes.val().split(',')[1];
 
-		let widthAndHeight = width * height;
+		total += (width * height);
+		total += +$('select[name="materials"]').val() * width * height;
 
-		total += widthAndHeight;
-
-		total += +$('select[name="materials"]').val() * widthAndHeight;
-
-		//console.log(total);
 		$space.find('input:checked').each(function () {
-
 			total += +$(this).val();
-
 		});
-		$setPrice.html(total);
-		let getPrice = total * 0.2;
-		$acttionPrice.html(total - getPrice);
+
+		$price.text(total);
+		$price_old.text(total - (total * 0.2));
 	};
 
-	let proportionalSizes = (width) => {
-
-		if ($('#proportional:checked').length) {
-
+	// Сохранять пропорции холста при отмеченной галочке
+	let setRateable = (width) => {
+		if ($('input[name="rateable"]:checked').length) {
 			if (width) {
-				//console.log("width");
-				$getHeight.val(Math.floor($getWidth.val() * 1.5));
+				$height_field.val(Math.floor($width_field.val() * 1.5));
 			} else {
-				//console.log("height");
-				$getWidth.val(Math.floor($getHeight.val() / 1.5));
+				$width_field.val(Math.floor($height_field.val() / 1.5));
 			}
 		}
 	};
 
-	$getSizes.on('change', function () {
+	// Обработчик на поля ввода размеров
+	$size_fields.on('change input', function(e) {
 		let $self = $(this);
-		if ($self.parent().attr('class').includes('width')) {
 
-			proportionalSizes(true);
-
-			countPrice($self.val(), false);
-
-
+		if ($self.attr('name') == 'width') {
+			setRateable(true);
+			priceCount($self.val(), false);
 		} else {
-
-			proportionalSizes();
-
-			countPrice(false, $self.val());
+			setRateable();
+			priceCount(false, $self.val());
 		};
 	});
 
 	// Обработчик на селект
-	$select.on('change', 'select', function (e) {
+	$select.on('change', function (e) {
 		render();
-		countPrice();
+		priceCount();
 	});
 
-	// Обработчик на все чекбоксы и радиокнопки
+	// Обработчик на селект с фиксированными размерами
+	$fixed_sizes.on('change', function (e) {
+		render();
+		priceCount();
+	});
+
+	// Обработчик на все чекбоксы и радиокнопки вариантов
 	$space.on('change', 'input[type="checkbox"], input[type="radio"]', function (e) {
 		let $self = $(this);
 		let deps = $self.data('deps');
@@ -126,10 +112,11 @@ import options from './calculator.json'
 		if (deps) {
 			render(deps.split(','), $self.parents('.properties__block'));
 		}
-		countPrice();
+
+		priceCount();
 	});
 
 	// Вызывается в первую очередь
 	render();
-	countPrice();
+	priceCount();
 })();

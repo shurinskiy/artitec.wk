@@ -72,8 +72,8 @@
 </header>
 <div class="breadcrumbs">
 	<div class="wrapper">
-		<div class="breadcrumbs__inner">
-			<div class="breadcrumbs__links ">
+		<div class="breadcrumbs__inner ">
+			<div class="breadcrumbs__links">
 				<a href="./" class="breadcrumbs__link">Главная</a>
 				<span>&gt;</span>
 				<span class="breadcrumbs__link breadcrumbs__link_current">Наше производство</span>
@@ -84,89 +84,54 @@
 
 <section class="calculator">
 	<div class="wrapper">
-		<div class="calculator__inner">
-			<div class="calculator__wrapper">
-				<div class="calculator__side">
-					<h3 class="calculator__title">ОНЛАЙН-КАЛЬКУЛЯТОР</h3>
-					<div class="calculator__size mb-4">
-						<div class="calculator__size-width">
-							<label class="mb-1">Размер, см</label>
-							<input type="text" value="40">
-						</div>
-						<span class="calculator__size-between">
-							<img src="./images/miltiplication.png" alt="">
-						</span>
-						<div class="calculator__size-height">
-							<input type="text" value="60">
-						</div>
-						<div class="calculator__size-proportional">
-							<input class="calculator__size-proportional-hidden" id="proportional" type="checkbox" checked>
-							<label for="proportional">
-								<span class="calculator__size-proportional-visible"></span>
-								<span class="calculator__size-proportional-text">ПРОПОРЦИОНАЛЬНЫЙ</span>
-							</label>
-						</div>
-						<div class="calculator__size-help">
-							<a class="properties__item properties__item_help" href="./" data-modal="help"></a>
-						</div>
-					</div>
-					<div class="calculator__material-select">
-						<h3 class="calculator__material-select-title">материал</h3>
-						<div class="calculator__material-select-wrapper">
-							<select name="materials">
-								<option value="2" data-deps="rigidbase" selected>Фотовинил</option>
-								<option value="3" data-deps="bagets">Фотобумага</option>
-								<option value="2.3" data-deps="stretcher,painting,bagets">Холст (100% ХЛОПОК)</option>
-							</select>
-						</div>
-
-						<a class="properties__item properties__item_help" href="./" data-modal="help"></a>
-
-					</div>
-					<div class="calculator__workspace properties">
-
-					</div>
-					<div class="calculator__bottom">
-						<div class="calculator__left">
-							<div class="calculator__left-price-old">
-								<span>3500 ₽</span>
-							</div>
-							<div class="calculator__left-price-new font-weight-bold">
-								<span>2600 ₽</span>
-							</div>
-						</div>
-						<div class="calculator__right">
-							<a href="" class="manufacture__button" data-modal="order">Заказать</a>
-						</div>
-					</div>
-				</div>
-				<div class="calculator__upload">
-					<label class="calculator__input-block" for="calculator-img">
-						<input class="calculator__input-img" type="file" name="iamge" hidden accept="image/*"
-							id="calculator-img">
-						<span class="calculator__input-block-img"><img src="./images/download.png" alt=""></span>
-						<span class="calculator__input-block-text">Загрузить изображение</span>
+		<div class="calculator__top-inner">
+			<div class="calculator__side">
+				<h3 class="calculator__title">Онлайн-калькулятор</h3>
+				<div class="calculator__sizes" data-label="Размер, см">
+					<input class="calculator__sizes-input" type="text" name="width" value="40">
+					<span class="calculator__sizes-between"></span>
+					<input class="calculator__sizes-input" type="text" name="height" value="60">
+					<label class="calculator__sizes-rateable">
+						<input type="checkbox" name="rateable" checked>
+						<span>Пропорциональный</span>
 					</label>
+					<a class="calculator__help help" href="./" data-modal="help"></a>
+				</div>
+				<div class="calculator__material">
+					<h3 class="calculator__material-title">Материал</h3>
+					<div class="calculator__material-select">
+						<select name="materials">
+							<option value="2.3" data-deps="stretcher, gelvarnish, bagets" selected>Холст (100% хлопок)</option>
+							<option value="2" data-deps="rigidbase">Фотовинил</option>
+							<option value="3" data-deps="bagets_paper">Фотобумага</option>
+						</select>
+					</div>
+					<a class="calculator__help help" href="./" data-modal="help"></a>
+				</div>
+
+				<!--Dynamic content -->
+				<div class="calculator__workspace properties"></div>
+				<!-- End of dynamic content -->
+
+				<div class="calculator__resume">
+					<div class="calculator__total">
+						<p><span>3500</span> ₽</p>
+						<p><span>2600</span> ₽</p>
+					</div>
+					<a href="./" class="calculator__order-btn" data-modal="order">Заказать</a>
 				</div>
 			</div>
-			<div class="calculator__description">
-				<p>Декор стен важен для любого интерьера. Если вы хотите купить картины для дома, офиса, ресторана, отеля,
-					салона красоты
-					или напечатать фотографии для дома или для выставки – вам в студию Артитэк!
-					Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем
-					репродукции картин и
-					помогаем оформлять интерьеры.</p>
-				<p>Среди наших клиентов: отель «Санкт-Петербург», рестораны «Bona Capona» и «Manana», музей современного
-					искусства Эрарта,
-					сеть пироговых «Линдфорс», отель «Best Western», автосалоны «Infiniti», профессиональные фотографы и
-					цифровые
-					Декор стен важен для любого интерьера. Если вы хотите купить картины для дома, офиса, ресторана, отеля,
-					салона красоты
-					или напечатать фотографии для дома или для выставки – вам в студию Артитэк!</p>
-				<p>Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем
-					репродукции картин и
-					помогаем оформлять интерьеры.</p>
+			<div class="calculator__upload">
+				<label class="calculator__upload-box">
+					<input class="calculator__upload-input" type="file" name="upload" hidden accept="image/*">
+					<span class="calculator__upload-text">Загрузить изображение</span>
+				</label>
 			</div>
+		</div>
+		<div class="calculator__description">
+			<p>Декор стен важен для любого интерьера. Если вы хотите купить картины для дома, офиса, ресторана, отеля, салона красоты или напечатать фотографии для дома или для выставки – вам в студию Артитэк! Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем репродукции картин и помогаем оформлять интерьеры.</p>
+			<p>Среди наших клиентов: отель «Санкт-Петербург», рестораны «Bona Capona» и «Manana», музей современного искусства Эрарта, сеть пироговых «Линдфорс», отель «Best Western», автосалоны «Infiniti», профессиональные фотографы и цифровые Декор стен важен для любого интерьера. Если вы хотите купить картины для дома, офиса, ресторана, отеля, салона красоты или напечатать фотографии для дома или для выставки – вам в студию Артитэк!</p>
+			<p>Наша основная специализация – печать на холсте. С 2008 года мы печатаем ваши фотографии, создаем репродукции картин и помогаем оформлять интерьеры.</p>
 		</div>
 	</div>
 </section>
@@ -209,86 +174,92 @@
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script>
 
-<div class="modal__hidden" id="order">
-	<form class="modal__form" action="/">
-		<div class="modal__field">
-			<span class="modal__label">Ваш e-mail</span>
-			<input class="modal__input" type="text" name="email" placeholder="E-mail">
-		</div>
-		<div class="modal__field">
-			<span class="modal__label">Ваше имя</span>
-			<input class="modal__input" type="text" name="name" placeholder="Имя">
-		</div>
-		<div class="modal__field">
-			<span class="modal__label">Ваш телефон</span>
-			<input class="modal__input" type="text" name="phone" placeholder="Телефон (в произвольной форме)">
-		</div>
-		<div class="modal__field">
-			<input class="modal__input" type="text" name="city" placeholder="Ваш город">
-		</div>
-		<div class="modal__field">
-			<label class="modal__file"><input type="file" name="file">Загрузить файлы</label>
-		</div>
-		<div class="modal__field">
-			<textarea class="modal__textarea" name="comment" placeholder="Ваш комментарий, если необходим"></textarea>
-		</div>
-		<div class="modal__bottom">
-			<input class="modal__submit" type="submit" value="Заказать">
-			<p class="modal__note">Нажимая кнопку, вы принимаете условия <a href="./">публичной оферты</a> и даете согласие
-				на обработку <a href="./">персональных данных</a></p>
-		</div>
-	</form>
-</div>
+<div class="modal__hidden">
+	
+	<div id="order">
+		<form class="modal__form" action="/">
+			<div class="modal__field">
+				<span class="modal__label">Ваш e-mail</span>
+				<input class="modal__input" type="text" name="email" placeholder="E-mail">
+			</div>
+			<div class="modal__field">
+				<span class="modal__label">Ваше имя</span>
+				<input class="modal__input" type="text" name="name" placeholder="Имя">
+			</div>
+			<div class="modal__field">
+				<span class="modal__label">Ваш телефон</span>
+				<input class="modal__input" type="text" name="phone" placeholder="Телефон (в произвольной форме)">
+			</div>
+			<div class="modal__field">
+				<input class="modal__input" type="text" name="city" placeholder="Ваш город">
+			</div>
+			<div class="modal__field">
+				<label class="modal__file"><input type="file" name="file">Загрузить файлы</label>
+			</div>
+			<div class="modal__field">
+				<textarea class="modal__textarea" name="comment" placeholder="Ваш комментарий, если необходим"></textarea>
+			</div>
+			<div class="modal__bottom">
+				<input class="modal__submit" type="submit" value="Заказать">
+				<p class="modal__note">Нажимая кнопку, вы принимаете условия <a href="./">публичной оферты</a> и даете согласие на обработку <a href="./">персональных данных</a></p>
+			</div>
+		</form>
+	</div>
 
-<div class="modal__hidden" id="help">
-	<img src="./images/canvas_size_modul.jpg" alt="">
-</div>
+	<div id="help">
+		<img src="./images/canvas_size_modul.jpg" alt="">
+	</div>
 
-<div class="modal__hidden" id="gelVarnish">
-	<p>Акриловый текстурный гель. Наносится художником вручную кистью. При высыхании образует прозрачную, глянцевую,
-		эластичную
-		пленку. Придаёт изображению объем и текстуру. Позволяет создавать эффект «мазка».</p>
-	<iframe width="" height="" src="https://www.youtube.com/embed/I5okwYus9QY" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="gelvarnish">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/I5okwYus9QY?autoplay=1"></button>
+		</div>
+		<p>Акриловый текстурный гель. Наносится художником вручную кистью. При высыхании образует прозрачную, глянцевую, эластичную пленку. Придаёт изображению объем и текстуру. Позволяет создавать эффект «мазка».</p>
+	</div>
 
-<div class="modal__hidden" id="stretcher">
-	<p>Подрамник из натурального дерева. Торцы (бока) подрамника будут обтянуты изображением. При этом изображение с
-		фронтальной плоскости не теряется - на торцы мы создаем его продолжение путем растяжения и копирования.</p>
-	<p>Широкий подрамник используется в картинах без рам и выглядит эффектно.</p>
-	<iframe width="" height="" src="https://www.youtube.com/embed/8jz5RXqZlwU" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-	<img src="./images/podramnik_modul.png" alt="" style="width: 100%;">
-</div>
+	<div id="stretcher">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/8jz5RXqZlwU?autoplay=1"></button>
+		</div>
+		<p>Подрамник из натурального дерева. Торцы (бока) подрамника будут обтянуты изображением. При этом изображение с фронтальной плоскости не теряется - на торцы мы создаем его продолжение путем растяжения и копирования.</p>
+		<p>Широкий подрамник используется в картинах без рам и выглядит эффектно.</p>
+		<img src="./images/podramnik_modul.png" alt="">
+	</div>
 
-<div class="modal__hidden" id="bagets">
-	<p>Если материал печати бумага — стоимость рамы включает в себя багет, стекло, картонный задник и подвес.</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="bagets">
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+		<p>Если материал печати бумага — стоимость рамы включает в себя багет, стекло, картонный задник и подвес.</p>
+	</div>
 
-<div class="modal__hidden" id="rigidbase">
-	<p>Накатка на жесткую основу</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="rigidbase">
+		<h2 class="modal__title">Накатка на жесткую основу</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
 
-<div class="modal__hidden" id="glass">
-	<p>Стекло</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
-</div>
+	<div id="glass">
+		<h2 class="modal__title">Стекло</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
 
-<div class="modal__hidden" id="mat">
-	<p>Паспарту</p>
-	<iframe width="280" height="158" src="https://www.youtube.com/embed/o2VjRyI274k" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
+	<div id="mat">
+		<h2 class="modal__title">Паспарту</h2>
+		<div class="modal__video">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<button class="modal__video-play" data-youtube-src="https://www.youtube.com/embed/o2VjRyI274k?autoplay=1"></button>
+		</div>
+	</div>
+
 </div>
 
 

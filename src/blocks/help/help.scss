@@ -1,0 +1,26 @@
+.help {
+	$self: &;
+	display: block;
+	position: relative;
+	width: 24px;
+	height: 24px;
+
+	
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: url('./images/prop-help.svg') center / auto no-repeat #e7e7e7;
+		// transition: background-color 0.3s ease-in;
+	}
+	
+	&:hover::before {
+		background: url('./images/prop-help-white.svg') center / auto no-repeat $cyan;
+	}
+}
